@@ -280,12 +280,12 @@ and digital logic gates.
 
 Truth table for and and or operations:
 
-| **x** | **y** | `&&` | `||` | 
-|:-----:|:-----:|:------:|:-------:|
-| False | False | False  | False   |     
-| False | True  | False  | True    |  
-| True  | False | False  | True    |      
-| True  | True  | True   | True    |
+| **x** | **y** | **&&** | **|| ** | **** | **** | **** | **** | **** | **** |
+|:-----:|:-----:|:------:|:-------:|:----:|:----:|:----:|:----:|:----:|:----:|
+| False | False | False  | False   |      |      |      |      |      |      |
+| False | True  | False  | True    |      |      |      |      |      |      |
+| True  | False | False  | True    |      |      |      |      |      |      |
+| True  | True  | True   | True    | 
 
 
 Truth table or not operatoin:
