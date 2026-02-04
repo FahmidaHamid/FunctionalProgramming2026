@@ -261,3 +261,31 @@ ghci> x = 3**2 + 9 - 2* 10 -- a complicated expression
 ghci> x
 
 ```
+
+
+## B) Writing Boolean (Logical) Expressions
+
+A Boolean expression is a logical formula used in programming and digital circuits that evaluates to one of two values: true (1) or false (0).
+ 
+Composed of Boolean constants, variables, and operators (AND, OR, NOT, XOR), 
+these expressions are essential for decision-making and controlling program flow. 
+
+They are fundamental in constructing conditions for loops, If statements, 
+and digital logic gates. 
+
+
+•	and operator: &&
+•	or operator: ||
+•	not operator: not (unary operator)
+
+------------------------------
+|x	| y	| &&	| || |
+------------------------------
+| False | 	False | 	False | 	False |
+------------------------------------------------------
+| False	| True	| False	| True|
+------------------------------------------------------
+| True	| False	| False	| True|
+------------------------------------------------------
+| True	| True	| True	| True|
+------------------------------------------------------
