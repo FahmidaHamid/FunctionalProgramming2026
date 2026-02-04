@@ -65,14 +65,15 @@ cop2930>
 
 	** Arithmetic Expressions in Haskell **
 
-	```
-	Lesson: An expression evaluates to a value and has a static type. 
+	
+	### Lesson: An expression evaluates to a value and has a static type. ### 
 
 	Example: 3 + 4 is an expression which is evaluated to a value 7
 
 	Note: A static type is a property of an expression determined at compile-time, before the program is run. 
 
-	```
+	----------------------------------------------------------
+
 	
 	Try the following instructions and record your output (copy each instruction and the result in a file named lab01<LASTNAME>.txt)
 
