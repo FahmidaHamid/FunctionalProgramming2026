@@ -59,23 +59,19 @@ cop2930>
 
 ## A) Writing Arithmetic Expressions
  
-	Haskell can deal with numbers and common arithmetic operations (add, subtract, multiply, 
-        divide, modulo). First, we practice writing some of those.
-
-
-	** Arithmetic Expressions in Haskell **
+Haskell can deal with numbers and common arithmetic operations (add, subtract, multiply, divide, modulo). First, we practice writing some of those.
 
 	
-	### Lesson: An expression evaluates to a value and has a static type. ### 
+### Lesson: An expression evaluates to a value and has a static type. 
 
-	Example: 3 + 4 is an expression which is evaluated to a value 7
+Example: 3 + 4 is an expression which is evaluated to a value 7
 
-	Note: A static type is a property of an expression determined at compile-time, before the program is run. 
+Note: A static type is a property of an expression determined at compile-time, before the program is run. 
 
-	----------------------------------------------------------
+----------------------------------------------------------
 
 	
-	Try the following instructions and record your output (copy each instruction and the result in a file named lab01<LASTNAME>.txt)
+++ Try the following instructions and record your output (copy each instruction and the result in a file named lab01<LASTNAME>.txt)
 
 	```
 	cop2930>45 + 44
