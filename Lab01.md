@@ -299,6 +299,15 @@ Truth table for `&&` and `||` operations:
 | True  | True  | True   | True    | 
 
 
+
+| x     | y     | x && y | x \|\| y |
+|-------|-------|--------|----------|
+| False | False | False  | False    |
+| False | True  | False  | True     |
+| True  | False | False  | True     |
+| True  | True  | True   | True     |
+
+
 Truth table or not operation:
 
 | **x** | not |
