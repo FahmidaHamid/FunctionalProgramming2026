@@ -289,9 +289,9 @@ and digital logic gates.
 
 Truth table for `&&` and `||` operations:
 
-|  **x**  |  **y**  |  `&&`    |  `||` |
+|  **x**  |  **y**  |  `&&`    |  `||`  |
  
-|:-----:|:-----:|:------:|:-------:|
+|:---:    |:---:    |:---:     |:---:   |
 
 | False | False | False  | False   |   
 | False | True  | False  | True    |   
