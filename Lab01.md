@@ -23,3 +23,20 @@ $ To load **GHCi** (latest version of Glassgow Haskell Compiler), type the follo
 ```
 fhamid@NSCHNSXYZ ~ % ghci
 ```
+If the compiler was installed properly, the prompt would show something like the following:
+
+```
+GHCi, version 9.6.7: https://www.haskell.org/ghc/  :? for help
+
+ghci> 
+
+```
+
+$$  To quit the ghci, type **:q** on the terminal
+
+```
+ghci> :q
+
+Leaving GHCi.
+
+```
