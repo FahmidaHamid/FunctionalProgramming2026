@@ -287,10 +287,12 @@ and digital logic gates.
  + or operator: `||`
  + not operator: `not` (unary operator)
 
-Truth table for and and or operations:
+Truth table for `&&` and `||` operations:
 
-| **x** | **y** | `&&`     |  `||` | 
+|  **x**  |  **y**  |  `&&`    |  `||` |
+ 
 |:-----:|:-----:|:------:|:-------:|
+
 | False | False | False  | False   |   
 | False | True  | False  | True    |   
 | True  | False | False  | True    |    
