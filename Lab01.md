@@ -16,7 +16,7 @@
 
 ## Practice Sheet
 
-## Basic Comments:
+## Basic Commands:
 
 + To load **GHCi** (latest version of Glassgow Haskell Compiler), type the following on your command prompt:
 
@@ -56,4 +56,58 @@ cop2930>
 ** note: we changed the prompt just for fun, in case you want to change it to something you like **
 
 ----------------------------------------------------------------------------------------
+
+## A) Writing Arithmetic Expressions
+ 
+	Haskell can deal with numbers and common arithmetic operations (add, subtract, multiply, 
+        divide, modulo). First, we practice writing some of those.
+
+
+	** Arithmetic Expressions in Haskell **
+
+	```
+	Lesson: An expression evaluates to a value and has a static type. 
+
+	Example: 3 + 4 is an expression which is evaluated to a value 7
+
+	Note: A static type is a property of an expression determined at compile-time, before the program is run. 
+
+	```
+	
+	Try the following instructions and record your output (copy each instruction and the result in a file named lab01<LASTNAME>.txt)
+
+	```
+	cop2930>45 + 44
+	?
+
+	cop2930>19 - 111 - 12 + 17
+	?
+
+	cop2930>45.6 - 55.12 + 11
+	?
+
+	cop2930>66
+	?
+
+	cop2930> 25 / 5
+	?
+
+	cop2930>23 / 2
+	?
+
+	cop2930>22 / 7
+	?
+
+	cop2930>66 * 0.1
+	?
+
+	cop2930>2 ** 3
+	?
+
+	```
+
+
+You may have noticed that Haskell Compiler/GHCi can handle real numbers (integers and rational numbers). 
+
+Later we will learn how Haskell handles complex/imaginary numbers.
 
