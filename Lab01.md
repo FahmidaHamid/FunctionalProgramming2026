@@ -1,6 +1,10 @@
+# COP 2930: Functional Programming
+# Spring 2026
+# 02/04/2026 (Day 02, Lab 01)
+
 *********************************************************************************************
 
-# Note: 
+### Note: 
 	-- We will use Terminal (Mac User) / Command Line Prompts (Windows User) to perform tasks.
 	-- Commands are short text instructions you type into a CLI (Command Line Interface) like Windows Command Prompt or macOS/Linux Terminal to perform tasks directly on your system
 	-- The lab has two parts: practice and test. You get 20 points each for completing them. 
@@ -10,7 +14,12 @@
 *******************************************************************************************
 
 
-# Practice Sheet
+## Practice Sheet
 
 ## Basic Comments:
 
+$ To load **GHCi** (latest version of Glassgow Haskell Compiler), type the following on your command prompt:
+
+```
+fhamid@NSCHNSXYZ ~ % ghci
+```
