@@ -341,3 +341,29 @@ ghci> (5**10) >= (6 * 23)
 ?
 
 ```
+
+### Functions
+
+In Haskell, a function is a mathematical concept that maps a set of inputs to a set of outputs, without producing side effects or modifying global state. They are defined by a type signature (optional but recommended) and one or more bindings (equations) that specify their logic. 
+
+In Haskell, functions are called by writing the function name, a space and then the parameters, separated by spaces.
+
+We will check some built-in functions today, learn more later:
+
+```
+ghci> max 4 5
+?
+ghci> max 4 (-5)
+?
+ghci> min 3 1
+?
+ghci> min (min 3 1) (-2)
+?
+ghci> min (max 4 5) (min 34 24)
+?
+
+
+```
+
+# That’s it for today. 
+# We will learn more in the next session.
