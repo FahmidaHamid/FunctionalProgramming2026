@@ -1,6 +1,7 @@
 # COP 2930: Functional Programming
 # Spring 2026
 # 02/04/2026 (Day 02, Lab 01)
+# Topic: Writing Basic Expressions
 
 *********************************************************************************************
 
@@ -378,4 +379,8 @@ ghci> min (max 4 5) (min 34 24)
 
 
 # That’s it for today. 
+
 # We will learn more in the next session.
+
+# Please collect the second part of the lab from your professor, complete it, submit and then you are done for the day :)
+
