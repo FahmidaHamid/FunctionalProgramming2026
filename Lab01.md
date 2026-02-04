@@ -41,7 +41,7 @@ Leaving GHCi.
 
 ```
 
-+ To clear the screen, type ** :! clear ** (for mac/linux) or ** :! cls ** (for windows)
++ To clear the screen, type __:! clear__ (for mac/linux) or __:! cls__ (for windows)
 
 + To change the prompt to ``cop2930'', type **:set prompt “cop2930> ”**
 
@@ -107,4 +107,72 @@ Note: A static type is a property of an expression determined at compile-time, b
 You may have noticed that Haskell Compiler/GHCi can handle real numbers (integers and rational numbers). 
 
 Later we will learn how Haskell handles complex/imaginary numbers.
+
+#### Type Checking: command **:t**
+
+```
+cop2930>:t 4 + 6
+
+4 + 6 :: Num a => a
+
+```
+
+** GHCi’s interpretation of the instruction in plain English:**
+ 
+You gave me an expression which contains some a (something that I recognize as a Num, short of Number and I will return you something like an a, meaning some Num).
+ 
+“=>” usually means “returns” and
+
+“::” means “given the left-hand-side as input”
+
+You may also use **:type** to ask for the type of the expression
+
+```
+cop2930>:t (34 + 99) * 5
+
+(34 + 99) * 5 :: Num a => a
+
+cop2930>:t (34 + 99) * 5.1
+
+(34 + 99) * 5.1 :: Fractional a => a
+
+```
+
+In next class, will talk about Type and Type-classes; for now, you may assume that 
+
+"Fractional" is used to indicate rational numbers and Num is used to indicate any type of Numbers.
+ 
+Hence, Fractional is a subtype of Num.
+
+Here's the set of numbers we usually use: 
+
++ Natural Numbers (N): {1, 2, 3, ...} (Used for counting).
++ Whole Numbers (W): {0, 1, 2, 3, ...} (Natural numbers plus zero).
++ Integers (Z): {..., -2, -1, 0, 1, 2, ...} (All whole numbers and their negatives).
++ Rational Numbers (Q): Numbers expressible as a fraction (e.g., 1/2, -3/4).
++ Real Numbers (R): All rational and irrational numbers (like  { … , √2, 2√3,  𝜋, ….}, etc.), representing all points on a number line. 
+
+
+### B) Expressions with Parenthesis:
+
+In Haskell, square brackets [] are reserved for Lists, and curly braces {} are used for Record syntax or layout blocks. For mathematical grouping, only parentheses () are valid. 
+Test each of the following expressions:
+
+```
+cop2930> (3 + 3)
+?
+cop2930>(3 - (-3)) 
+?
+cop2930>(3 - (-3 + 5))
+?
+cop2930>3 - -3 + 5
+?
+cop2930>3 - (-3) + 5?
+
+```
+In second expression, (-3) is used to negate a value. 
+
+The 4th expression 4 is supposed to produce an error. Carefully go over the error message.
+
+
 
