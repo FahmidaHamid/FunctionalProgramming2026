@@ -18,7 +18,7 @@
 
 ## Basic Comments:
 
-$ To load **GHCi** (latest version of Glassgow Haskell Compiler), type the following on your command prompt:
++ To load **GHCi** (latest version of Glassgow Haskell Compiler), type the following on your command prompt:
 
 ```
 fhamid@NSCHNSXYZ ~ % ghci
@@ -32,7 +32,7 @@ ghci>
 
 ```
 
-$$  To quit the ghci, type **:q** on the terminal
++  To quit the ghci, type **:q** on the terminal
 
 ```
 ghci> :q
@@ -40,3 +40,20 @@ ghci> :q
 Leaving GHCi.
 
 ```
+
++ To clear the screen, type **:! clear ** (for mac/linux) or ** :! cls ** (for windows)
+
++ To change the prompt to ``cop2930'', type **:set prompt “cop2930> ”**
+
+```
+
+ghci> :set prompt "cop2930>"
+
+cop2930>
+
+
+```
+** note: we changed the prompt just for fun, in case you want to change it to something you like **
+
+----------------------------------------------------------------------------------------
+
