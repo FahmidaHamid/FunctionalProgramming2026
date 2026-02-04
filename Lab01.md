@@ -41,7 +41,7 @@ Leaving GHCi.
 
 ```
 
-+ To clear the screen, type **:! clear ** (for mac/linux) or ** :! cls ** (for windows)
++ To clear the screen, type ** :! clear ** (for mac/linux) or ** :! cls ** (for windows)
 
 + To change the prompt to ``cop2930'', type **:set prompt “cop2930> ”**
 
