@@ -353,7 +353,7 @@ ghci> (5**10) >= (6 * 23)
 
 ```
 
-### Functions
+## C) Functions
 
 In Haskell, a function is a mathematical concept that maps a set of inputs to a set of outputs, without producing side effects or modifying global state. They are defined by a type signature (optional but recommended) and one or more bindings (equations) that specify their logic. 
 
