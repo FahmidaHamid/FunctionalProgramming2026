@@ -274,18 +274,40 @@ They are fundamental in constructing conditions for loops, If statements,
 and digital logic gates. 
 
 
-•	and operator: &&
-•	or operator: ||
-•	not operator: not (unary operator)
+ + and operator: `&&`
+ + or operator: `||`
+ + not operator: `not` (unary operator)
 
-------------------------------
-|x	| y	| &&	| || |
-------------------------------
-| False | 	False | 	False | 	False |
-------------------------------------------------------
-| False	| True	| False	| True|
-------------------------------------------------------
-| True	| False	| False	| True|
-------------------------------------------------------
-| True	| True	| True	| True|
-------------------------------------------------------
+| **x** | **y** | **&&** | **|| ** | 
+|:-----:|:-----:|:------:|:-------:|
+| False | False | False  | False   |     
+| False | True  | False  | True    |  
+| True  | False | False  | True    |      
+| True  | True  | True   | True    | 
+
+
+| **x** | **not ** |
+|:-----:|:--------:|
+| False | True     |
+| True  | False    |
+
+
+Try the following expressions and record the responses:
+
+```
+ghci> (True || False)
+?
+ghci> True && False
+?
+ghci> (True || False) && False
+?
+ghci> (True || False) && (not False)
+?
+ghci> (True || False) && (not (not False))
+?
+ghci> (not (True || False)) &&  (not False)
+?
+ghci> (not (True || False)) && (not  (not False))
+?
+
+```
