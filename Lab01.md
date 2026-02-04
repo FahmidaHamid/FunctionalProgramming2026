@@ -53,7 +53,7 @@ cop2930>
 
 
 ```
-** note: we changed the prompt just for fun, in case you want to change it to something you like **
+** note: we changed the prompt just for fun, in case you want to change it to something you like
 
 ----------------------------------------------------------------------------------------
 
@@ -71,9 +71,9 @@ Note: A static type is a property of an expression determined at compile-time, b
 ----------------------------------------------------------
 
 	
-++ Try the following instructions and record your output (copy each instruction and the result in a file named lab01<LASTNAME>.txt)
++ Try the following instructions and record your output (copy each instruction and the result in a file named lab01<LASTNAME>.txt)
 
-	```
+```
 	cop2930>45 + 44
 	?
 
@@ -101,7 +101,7 @@ Note: A static type is a property of an expression determined at compile-time, b
 	cop2930>2 ** 3
 	?
 
-	```
+```
 
 
 You may have noticed that Haskell Compiler/GHCi can handle real numbers (integers and rational numbers). 
