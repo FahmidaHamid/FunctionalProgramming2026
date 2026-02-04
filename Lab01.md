@@ -278,12 +278,14 @@ and digital logic gates.
  + or operator: `||`
  + not operator: `not` (unary operator)
 
-| **x** | **y** | **&&** | **|| ** | 
+| **x** | **y** | **&&** | **||** | 
 |:-----:|:-----:|:------:|:-------:|
 | False | False | False  | False   |     
 | False | True  | False  | True    |  
 | True  | False | False  | True    |      
-| True  | True  | True   | True    | 
+| True  | True  | True   | True    |
+------------------------------------
+
 
 
 | **x** | **not ** |
