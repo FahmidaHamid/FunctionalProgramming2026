@@ -56,6 +56,14 @@ cop2930>
 ```
 ** note: we changed the prompt just for fun, in case you want to change it to something you like
 
++ Standard Prelude: 
+
+-- Prelude is a module that contains a small set of standard definitions and is included automatically into all Haskell modules.
+
+-- The standard Prelude is automatically loaded every time you start GHCi, providing all the basic, commonly used functions and types without requiring an explicit import.
+
+-- In GHC version 9.x and later, the default prompt is simply ghci>, but the Prelude is still implicitly loaded.
+ 
 ----------------------------------------------------------------------------------------
 
 ## A) Writing Arithmetic Expressions
