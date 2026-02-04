@@ -315,3 +315,29 @@ ghci> (not (True || False)) && (not  (not False))
 ?
 
 ```
+
+#### Testing Equality:
+
+```
+ghci> 1 == 600
+?
+ghci> 1 == (600 / 100)/6
+?
+ghci> 5 /= 5 --not equal
+?
+ghci> 5 /= 6 --not equal
+?
+
+```
+
+#### Comparison:
+
+```
+ghci> 5 >= (6 * 23)
+?
+ghci> (5**10) >= (6 * 23)
+?
+     ghci> -3 < -100
+?
+
+```
