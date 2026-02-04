@@ -193,7 +193,7 @@ Postfix notation (example: 3 5 (+)) is generally not part of standard Haskell sy
 
 ```
 
-### iv) iii.	Variables:
+###  iii) Variables:
 
 -- In programming, a variable is a named storage location in a computer's memory that holds a value or data, 
 which can be changed during the execution of a program.
@@ -206,5 +206,58 @@ cop2930>let x = 4 + 3**2
 
 cop2930>x
 ?
+
+```
+
+We may declare variables without the **keyword** `let`:
+
+```
+
+ghci> x = 10
+ghci> y = 5
+ghci> z = x + 2 * y
+ghci> z
+?
+ghci> x
+?
+ghci> y
+?
+
+```
+
+In Haskell, "variables" are names for expressions that hold immutable values; 
+once a value is bound to a name within a specific scope, it cannot be changed or reassigned. 
+This concept is closer to mathematical variables or constants in imperative languages (C).
+
+Test the following:
+
+```
+ghci> x = 15
+ghci> x = 22
+ghci> x
+?
+
+```
+
+Now, try the following:
+
+```
+ghci> x = 2 * x
+ghci> x
+?
+
+```
+-- Try to explain the behavior.
+-- You may use Google/other sources. It's okay if you don't/cant explain it now.
+
+
+### iv) Comments:
+
+Sometimes we write some statements not for the compiler to execute but for ourselves to remember some clues or to explain the idea. We call them commands. 
+Haskell considers ```--``` as an indication of a comment.
+
+```
+ghci> x = 3**2 + 9 - 2* 10 -- a complicated expression
+ghci> x
 
 ```
