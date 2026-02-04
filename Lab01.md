@@ -5,7 +5,7 @@
 
 *********************************************************************************************
 
-### Note: 
+## Note: 
 	-- We will use Terminal (Mac User) / Command Line Prompts (Windows User) to perform tasks.
 	-- Commands are short text instructions you type into a CLI (Command Line Interface) like Windows Command Prompt or macOS/Linux Terminal to perform tasks directly on your system
 	-- The lab has two parts: practice and test. You get 20 points each for completing them. 
@@ -289,7 +289,7 @@ and digital logic gates.
 
 Truth table for and and or operations:
 
-| **x** | **y** | && | || | 
+| **x** | **y** | `&&`     |  `||` | 
 |:-----:|:-----:|:------:|:-------:|
 | False | False | False  | False   |   
 | False | True  | False  | True    |   
