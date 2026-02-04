@@ -351,6 +351,17 @@ In Haskell, functions are called by writing the function name, a space and then 
 We will check some built-in functions today, learn more later:
 
 ```
+ghci> succ 1
+?
+ghci> succ 4
+?
+ghci> pred 4
+?
+ghci> pred (-1)
+?
+ghci> pred 100
+?
+
 ghci> max 4 5
 ?
 ghci> max 4 (-5)
@@ -364,6 +375,7 @@ ghci> min (max 4 5) (min 34 24)
 
 
 ```
+
 
 # That’s it for today. 
 # We will learn more in the next session.
