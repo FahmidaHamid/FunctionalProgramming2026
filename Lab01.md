@@ -193,3 +193,18 @@ Postfix notation (example: 3 5 (+)) is generally not part of standard Haskell sy
 
 ```
 
+### iv) iii.	Variables:
+
+-- In programming, a variable is a named storage location in a computer's memory that holds a value or data, 
+which can be changed during the execution of a program.
+ 
+-- Variables are fundamental building blocks that allow programs to store, retrieve, 
+and manipulate information dynamically.
+
+```
+cop2930>let x = 4 + 3**2
+
+cop2930>x
+?
+
+```
