@@ -279,8 +279,7 @@ A Boolean expression is a logical formula used in programming and digital circui
 Composed of Boolean constants, variables, and operators (AND, OR, NOT, XOR), 
 these expressions are essential for decision-making and controlling program flow. 
 
-They are fundamental in constructing conditions for loops, If statements, 
-and digital logic gates. 
+They are fundamental in constructing conditions for loops, If statements, and digital logic gates. 
 
 
  + and operator: `&&`
@@ -288,16 +287,6 @@ and digital logic gates.
  + not operator: `not` (unary operator)
 
 Truth table for `&&` and `||` operations:
-
-|  **x**  |  **y**  |  `&&`    |  `||`  |
- 
-|:---:    |:---:    |:---:     |:---:   |
-
-| False | False | False  | False   |   
-| False | True  | False  | True    |   
-| True  | False | False  | True    |    
-| True  | True  | True   | True    | 
-
 
 
 | x     | y     | x && y | x \|\| y |
