@@ -70,8 +70,9 @@ Note: A static type is a property of an expression determined at compile-time, b
 
 ----------------------------------------------------------
 
+### i) Basic Arithmetic Operators (+. -, *, /):
 	
-+ Try the following instructions and record your output (copy each instruction and the result in a file named lab01<LASTNAME>.txt)
+Try the following instructions and record your output (copy each instruction and the result in a file named lab01LASTNAME.txt)
 
 ```
 	cop2930>45 + 44
@@ -153,7 +154,7 @@ Here's the set of numbers we usually use:
 + Real Numbers (R): All rational and irrational numbers (like  { … , √2, 2√3,  𝜋, ….}, etc.), representing all points on a number line. 
 
 
-### B) Expressions with Parenthesis:
+### ii) Expressions with Parenthesis:
 
 In Haskell, square brackets [] are reserved for Lists, and curly braces {} are used for Record syntax or layout blocks. For mathematical grouping, only parentheses () are valid. 
 Test each of the following expressions:
@@ -175,4 +176,20 @@ In second expression, (-3) is used to negate a value.
 The 4th expression 4 is supposed to produce an error. Carefully go over the error message.
 
 
+### Infix, Prefix, Postfix Notation
+
+``` 
+
++	Infix notation: 3 + 5 
++	Prefix notation:  (+) 3 5 
++	Postfix Notation: 3 5 (+)
+
+Infix Notation (Standard for operators): Functions whose names consist entirely of symbols (like +, *, ==, etc.) are used with infix notation by default, where the operator is placed between its two arguments.  
+
+Haskell uses both prefix and infix notation, with the notation used depending on how a function is defined and called. 
+
+Postfix notation (example: 3 5 (+)) is generally not part of standard Haskell syntax.
+
+
+```
 
