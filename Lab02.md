@@ -56,23 +56,22 @@ ghci> x ++ [25, 30, 35, 40]
 ???
 
 -- Create a list by using pattern (arithmetic series)
-	ghci> let p = [1..100]
-	ghci> p
-	???
+ghci> let p = [1..100]
+ghci> p
+???
 
-	ghci> let q = [3, 6..90]
-	ghci> q
-	???
+ghci> let q = [3, 6..90]
+ghci> q
+???
  
 
-	ghci> let r = [2, 0..(-20)]
+ghci> let r = [2, 0..(-20)]
+ghci> r
+???
 
-	ghci> r
-	???
-
-	-- Test the following:
-	ghci> let t = [1..]
-	ghci> t 
+-- Test the following:
+ghci> let t = [1..]
+ghci> t 
 
 
 ```
@@ -86,7 +85,7 @@ In Haskell, a function is a fundamental building block that operates on input pa
 Functions are defined by specifying an optional type signature and the function body. 
 
 - Create a file **lab02<lastname>.hs**  where <lastname> should be your lastname. 
-- CCreate/Define functions in the file and test them. Save the sample test cases (along with output) as multiline comments, right below the same function.
+- Create/Define functions in the file and test them. Save the sample test cases (along with output) as multiline comments, right below the same function.
 - I might have given some test cases for some problems. You will have to test your functions on those as well as three new test cases (for each problem/function), making a total of at least 6 distinct test cases per function. Your functions output must match with mine.
 - For each problem: you get 4 points for writing/solving the problem and then 6 points for the test cases.
 - You will submit the source file (lab02<lastname>.hs) as your work for today.
@@ -95,7 +94,7 @@ Functions are defined by specifying an optional type signature and the function 
 
 ### Task 01
 
-Use the definition of doubleMe and douubleUs discussed in class for this experiment.
+Use the definition of **doubleMe** and **doubleUs** discussed in class for this experiment.
 
 Define a function (say, **quadMe**) to replicate the behavior of the following function using only doubleMe $f(x)=4x$.
 
@@ -114,3 +113,27 @@ ghci>
 
 ```
 
+### Task 02:
+
+Define another function, **quadMe2**, that replicates the same behavior  as **quadMe**, this time, only use __doubleUs__. 
+- Again, note that doubleUs is not available with the standard prelude; so please define the function first
+- Don’t forget to add the test cases.
+
+
+### Task 03:
+
+We have seen that the standard PRELUDE has already a defined function calle **max** that can help us find the 
+maximum value between two inputs. But max directly cannot handle three inputs. Your task is to define a function called 
+**maxAmong3** that will take three numbers as input and return the maximum among them. While doing so, you must use the built-in max function.
+
+```
+-- Sample Test Cases
+ghci> maxAmong3 2 6 1
+???
+ghci> maxAmong3 2 (-6) 1
+???
+ghci> maxAmong3 (-6) (-6) (-6)
+???
+ghci> 
+
+```
