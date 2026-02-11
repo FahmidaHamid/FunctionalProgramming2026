@@ -276,7 +276,12 @@ True
 
 Without testing the following function (by just looking at the definition), describe what it does. 
 
-Do not test it on GHCi. We just want to check you can parse the instructions/statements and make some sense out of it.
+```
+xxxxXXXxxxx xs = head xs > head (tail xs)
+
+```
+
+Do not test it with the GHCi. We just want to check whether you can parse the instructions/statements and make some sense out of it.
 
 Record your  response in the same .hs file as a multi line comment.
 
