@@ -79,10 +79,38 @@ ghci> x ++ [25, 30, 35, 40]
 
 
 
-## Functions 
+## Part 02: Functions 
 
 
 In Haskell, a function is a fundamental building block that operates on input parameters and returns a result without causing side effects (it is a "pure" functional language). 
 Functions are defined by specifying an optional type signature and the function body. 
 
+- Create a file **lab02<lastname>.hs**  where <lastname> should be your lastname. 
+- CCreate/Define functions in the file and test them. Save the sample test cases (along with output) as multiline comments, right below the same function.
+- I might have given some test cases for some problems. You will have to test your functions on those as well as three new test cases (for each problem/function), making a total of at least 6 distinct test cases per function. Your functions output must match with mine.
+- For each problem: you get 4 points for writing/solving the problem and then 6 points for the test cases.
+- You will submit the source file (lab02<lastname>.hs) as your work for today.
+- There is no need to submit anything for part 01.
+
+
+### Task 01
+
+Use the definition of doubleMe and douubleUs discussed in class for this experiment.
+
+Define a function (say, **quadMe**) to replicate the behavior of the following function using only doubleMe $f(x)=4x$.
+
+- Note that doubleMe is not available with standard prelude; so please define the function first and then define quadMe; otherwise, your program will not work.
+
+ ```
+- Sample Test Cases:
+
+ghci> quadMe 1
+4
+ghci> quadMe 2
+8
+ghci> quadMe 10
+40
+ghci> 
+
+```
 
