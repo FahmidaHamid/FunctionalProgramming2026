@@ -27,7 +27,7 @@ In this cases, having individual variables is not ideal. We need to store them i
 
 
 
-```
+```haskell
 --	Declare a list, print/show it
 
 ghci> let x = [5, 10, 15, 20]
@@ -112,9 +112,8 @@ Use the definition of **doubleMe** and **doubleUs** discussed in class for this 
 
 Define a function (say, **quadMe**) to replicate the behavior of the following function using only doubleMe:
 
-```
- $f(x)=4x$.
-```
+
+ +  $f(x)=4x$.
 
 - Note that **doubleMe** is not available with standard prelude; so please define the function first and then define quadMe; otherwise, your program will not work.
 
