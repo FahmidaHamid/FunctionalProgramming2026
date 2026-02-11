@@ -9,9 +9,9 @@
 	-- We will use Terminal (Mac User) / Command Line Prompts (Windows User) to perform tasks (compile and run).
         -- For part 02, we will use a text editor to create a source file.
 	-- The lab has two parts: practice and test. You get 100 points each for completing them successfully.  
-	-- Today, you *do not have to submit the practice notes*.
+	-- Today, you do not have to submit the practice notes.
 	-- You will only sublit your solution for part 02. 
-	-- Your solution should be named as **Lab02LASTNAME.hs**  where LASTNAME must be your last name.
+	-- Your solution should be named as Lab02LASTNAME.hs  where LASTNAME must be your last name.
 
 *******************************************************************************************
 
@@ -118,7 +118,8 @@ Define a function (say, **quadMe**) to replicate the behavior of the following f
 - Note that **doubleMe** is not available with standard prelude; so please define the function first and then define quadMe; otherwise, your program will not work.
 
 ```haskell
-- Sample Test Cases:
+
+-- Sample Test Cases:
 
 ghci> quadMe 1
 4
@@ -144,7 +145,9 @@ We have seen that the standard PRELUDE has already a defined function called **m
 maximum value between two inputs. But max directly cannot handle three inputs. Your task is to define a function called 
 **maxAmong3** that will take three numbers as input and return the maximum among them. While doing so, you must use the built-in max function.
 
+
 ```haskell
+
 -- Sample Test Cases
 
 ghci> maxAmong3 2 6 1
