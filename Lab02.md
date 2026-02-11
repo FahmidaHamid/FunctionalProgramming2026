@@ -117,7 +117,7 @@ Define a function (say, **quadMe**) to replicate the behavior of the following f
 
 - Note that **doubleMe** is not available with standard prelude; so please define the function first and then define quadMe; otherwise, your program will not work.
 
- ```
+```haskell
 - Sample Test Cases:
 
 ghci> quadMe 1
@@ -144,7 +144,7 @@ We have seen that the standard PRELUDE has already a defined function called **m
 maximum value between two inputs. But max directly cannot handle three inputs. Your task is to define a function called 
 **maxAmong3** that will take three numbers as input and return the maximum among them. While doing so, you must use the built-in max function.
 
-```
+```haskell
 -- Sample Test Cases
 
 ghci> maxAmong3 2 6 1
@@ -164,7 +164,8 @@ three numbers as input and return the maximum among them. While doing so, you **
 built-in max function or maxAmong3 or maximum function.
 
 
-```
+```haskell
+
 ghci> maxAmongThree (-6) (-6) (-6)
 ???
 ghci> maxAmongThree (-6) (-6) 6
@@ -185,7 +186,8 @@ Define a function to help me generate the grades. Name it as gradeBookCalculator
 + 80≤score<90,then grade=B
 + 90≤score<100,then grade=A
 
-```
+```haskell
+
 -- Sample Test cases:
 
 ghci> gradeBookCalculator 45
@@ -212,7 +214,8 @@ ghci>
 
 Define a function, **squareXY**, that replicates the behavior of the following function: $f(x,y)=x^2+y^2$
 
-```
+```haskell
+
 ghci> squareXY 3 3
 18
 ghci> squareXY 3 (-2)
@@ -234,7 +237,7 @@ Task 07:
 Define a function called `getTheHeadsTogether` that takes two lists as input and gets 
 the heads of each of the lists and returns them as a new list.
 
-```
+```haskell
 -- sample test cases and corresponding outputs
 
 ghci> getTheHeadsTogether [1..100] [10, 9 .. 0]
@@ -261,7 +264,7 @@ ghci> getTheHeadsTogether "Hello" (head (reverse(tail ["Hello", "There", "Funny"
 
 Define a function, whoIsLonger, that compares two lists and returns the one with more elements. 
 
-```
+```haskell
 ghci> whoIsLonger "Hi there! Don't go too fast" "Hi"
 
 "Hi there! Don't go too fast"
@@ -279,7 +282,8 @@ ghci>
 Define a function, `isPalindrome` that takes a single string as input and 
 returns True or False based on whether the input string is a palindrome or not.
 
-```
+```haskell
+
 -- Sample Test Cases:
 
 ghci> isPalindrome "racecar"
@@ -298,7 +302,8 @@ True
 
 Without testing the following function (by just looking at the definition), describe what it does. Also, write 6 test cases after the description.
 
-```
+```haskell
+
 xxxxXXXxxxx xs = head xs > head (tail xs)
 
 ```
