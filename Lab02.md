@@ -180,7 +180,7 @@ ghci> maxAmongThree 12 (-6) 6
 Define a function to help me generate the grades. Name it as gradeBookCalculator. 
 
 - The following is my rubric:
-+ 0≤score<60,then grade " 
++ 0≤score<60,then grad=F
 + 60≤score<70,then grade=D
 + 70≤score<80,then grade=C
 + 80≤score<90,then grade=B
@@ -232,7 +232,6 @@ ghci>
 
 ### Task 07:
 
-Task 07:
 
 Define a function called `getTheHeadsTogether` that takes two lists as input and gets 
 the heads of each of the lists and returns them as a new list.
@@ -259,6 +258,7 @@ ghci> getTheHeadsTogether "Hello" (head (reverse(tail ["Hello", "There", "Funny"
 
 ```
 + Note: Strings (written with double quotes, “”), are also lists. They are lists of characters.
+
 
 ### Task 08:
 
