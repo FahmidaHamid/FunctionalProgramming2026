@@ -1,7 +1,7 @@
 # COP 2930: Functional Programming
 # Spring 2026
 # 02/11/2026 (Day 03, Lab 02)
-# Topic: Writing Basic Expressions
+# Topic: Functions, Lists, and Haskell Scripts
 
 *********************************************************************************************
 
