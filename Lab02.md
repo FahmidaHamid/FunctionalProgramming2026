@@ -137,3 +137,148 @@ ghci> maxAmong3 (-6) (-6) (-6)
 ghci> 
 
 ```
+
+### Task 04:
+
+For this problem, your goal is to define a function called **maxAmongThree** that will take 
+three numbers as input and return the maximum among them. While doing so, you __must not__ use the 
+built-in max function or maxAmong3 or maximum function.
+
+
+```
+ghci> maxAmongThree (-6) (-6) (-6)
+???
+ghci> maxAmongThree (-6) (-6) 6
+???
+ghci> maxAmongThree 12 (-6) 6
+???
+
+```
+
+### Task 05:
+Define a function to help me generate the grades. Name it as gradeBookCalculator. 
+
+- Following is my rubric:
++ 0≤score<60,then grade="F" 
++ 60≤score<70,then grade=D
++ 70≤score<80,then grade=C
++ 80≤score<90,then grade=B
++ 90≤score<100,then grade=A
+
+```
+-- Sample Test cases:
+ghci> gradeBookCalculator 45
+"F"
+ghci> gradeBookCalculator 90
+"A"
+ghci> gradeBookCalculator 80
+"B"
+ghci> gradeBookCalculator 90
+"A"
+ghci> gradeBookCalculator 100
+"A"
+ghci> gradeBookCalculator 75
+"C"
+ghci> gradeBookCalculator 85
+"B"
+ghci> gradeBookCalculator 66
+"D"
+ghci>
+
+```
+
+### Task 06:
+
+Define a function, **squareXY**, that replicates the behavior of the following function: $f(x,y)=x^2+y^2$
+
+```
+ghci> squareXY 3 3
+18
+ghci> squareXY 3 (-2)
+13
+ghci> squareXY 4 3
+25
+ghci> sqrt 25
+5.0
+ghci> squareXY 4 0
+16
+ghci>
+
+```
+
+### Task 07:
+
+Task 07:
+
+Implement/Define a function called `getTheHeadsTogether` that takes two lists as input and gets 
+the heads of each of the lists and returns them as a new list.
+
+```
+-- sample test cases and corresponding outputs
+
+ghci> getTheHeadsTogether [1..100] [10, 9 .. 0]
+[1,10]
+
+ghci> getTheHeadsTogether "Hello" "World"
+"HW"
+ghci> getTheHeadsTogether "Hello" "12345"
+"H1"
+
+ghci> getTheHeadsTogether "Hello" (reverse "12345")
+"H5"
+
+ghci> getTheHeadsTogether "Hello" (head ["Hello", "There", "Funny", "Man"])
+"HH"
+
+ghci> getTheHeadsTogether "Hello" (head (reverse(tail ["Hello", "There", "Funny", "Man"])))
+"HM"
+
+```
++ Note: Strings (written with double quotes, “”), are also lists. They are lists of characters.
+
+### Task 08:
+
+Define a function, whoIsLonger, that compares two lists and returns the one with more elements. 
+
+```
+ghci> whoIsLonger "Hi there! Don't go too fast" "Hi"
+
+"Hi there! Don't go too fast"
+
+ghci> whoIsLonger [1..10] [1..100]
+
+[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100]
+ghci> 
+
+
+```
+
+### Task 09:
+
+Define a function, `isPalindrome` that takes a single string as input and 
+returns True or False based on whether the input string is a palindrome or not.
+
+```
+-- Sample Test Cases:
+ghci> isPalindrome "racecar"
+True
+ghci> isPalindrome "racingcar"
+False
+ghci> isPalindrome ""
+True
+ghci> isPalindrome "#"
+True
+
+```
+
+
+### Task 10:
+
+Without testing the following function (by just looking at the definition), describe what it does. 
+
+Do not test it on GHCi. We just want to check you can parse the instructions/statements and make some sense out of it.
+
+Record your  response in the same .hs file as a multi line comment.
+
+Mention {-  response to Task 10  …. -} at the beginning of  the explanation block so I can understand.
+
