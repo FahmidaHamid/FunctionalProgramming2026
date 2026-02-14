@@ -7,7 +7,9 @@
 
 ### Topic 01: Types and Typeclasses
 
-a) Each type is a set of values.
+#### a) Types:
+
+Each type is a set of values.
 
 Some standard data types in Haskell are: Bool, Char, String, Int, Integer, Float, Double.
 
@@ -166,7 +168,7 @@ ghci>
 
 For example: `aSampleFunction` is a polymorphic function that can deal with characters, numbers, lists.
  
-b) Typeclass:
+#### b) Typeclass:
 
 - Typeclasses are sets of types. 
 
@@ -205,6 +207,7 @@ Here are some common typeclasses in Haskell:
 	- types: Float, Double
 
 -typeclass: Integral
+
 	- types: Int, Integer
 
 -typeclass: RealFloat
