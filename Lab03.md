@@ -286,15 +286,25 @@ ghci>
 
 ```haskell
 
-abs1 x 
-    | x >= 0 = x 
-    | otherwise = (-x)
+sillyTask2 x y
+    | (x > y) = do
+          show x ++ " is greater than " ++ show y
+    | (y > x) = do
+          show y ++ " is greater than " ++ show x
+    | otherwise = "they are equal"
 
+```
+and here is how we test it:
 
-sillyTask1 x y 
- | (x > y) = "x is greater than y" 
- | (y > x) = "y is greater than x" 
- | otherwise = "both are equal"
+```haskell
 
+ghci> sillyTask2  5 4
+"5 is greater than 4"
+
+ghci> sillyTask2  4 4
+"they are equal"
+
+ghci> sillyTask2  (-4) 4
+"4 is greater than -4"
 
 ```
