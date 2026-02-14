@@ -239,3 +239,48 @@ If we carefully analyze the type signature, what do we see?
 Finally, we may summarize that the `check` function takes two Numbers as input and tests their Equality and returns a Bool (True/False) decision.
  
 
+### Topic 02) Conditionals
+
+- example 01: Let's define a function `sillyTask1` in a file (definition below), named `lab03.hs`
+
+Notice how each condition composes multi-line instructions.
+ 
+```haskell
+
+sillyTask1 x y =
+    if (x > y) then do
+       print x
+       print "is greater than "
+       print y
+    else if (y > x) then do
+       print y
+       print "is greater than "
+       print x
+    else
+       print "they are equal"
+
+
+```
+Here is how I tested it:
+
+```haskell
+
+fhamid@NSCHNS172 Codes % ghci lab03.hs 
+GHCi, version 9.6.7: https://www.haskell.org/ghc/  :? for help
+[1 of 2] Compiling Main             ( lab03.hs, interpreted )
+Ok, one module loaded.
+ghci> sillyTask1 3 5
+5
+"is greater than "
+3
+ghci> sillyTask1 3 (-5)
+3
+"is greater than "
+-5
+ghci> sillyTask1 3 (3)
+"they are equal"
+ghci> 
+
+
+
+```
