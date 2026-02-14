@@ -197,18 +197,22 @@ As a consequence, there is no need for a type in `Eq` to provide both definition
 Here are some common typeclasses in Haskell:
 
 -typeclass: Num 
-	- types: Int, Integer, Float, Double
+    
+    - types: Int, Integer, Float, Double
 
 -typeclass: Fractional
+
 	- types: Float, Double
 
 -typeclass: Integral
 	- types: Int, Integer
 
 -typeclass: RealFloat
+
         - types: Float, Double
 
 -typeclass: Ord
+
         - types: all except IO, IOError, and functions
 
 If interested, you may check this information out: https://en.wikibooks.org/wiki/Haskell/Classes_and_types#/media/File:Base-classes.svg
