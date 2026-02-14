@@ -168,9 +168,33 @@ For example: `aSampleFunction` is a polymorphic function that can deal with char
  
 b) Typeclass:
 
-Typeclasses are sets of types
+- Typeclasses are sets of types. 
 
-Here are some common typeclasses in `ghci`:
+- The point of type classes is to ensure that certain operations will be available for values of chosen types
+
+- Classes are not types, but categories of types, and so the instances of a class are types instead of values.
+
+- Let's try to understand the idea via this example:
+
+```haskell
+
+class  Eq a  where
+   (==), (/=) :: a -> a -> Bool
+
+       -- Minimal complete definition:
+       --      (==) or (/=)
+   x /= y     =  not (x == y)
+   x == y     =  not (x /= y)
+
+```
+The definition states that if a type `a` is to be made an instance of the class `Eq` it must support the functions (==) and (/=) 
+   - the class methods - both of them having type a -> a -> Bool. 
+
+Additionally, the class provides default definitions for (==) and (/=) in terms of each other.
+ 
+As a consequence, there is no need for a type in `Eq` to provide both definitions - given one of them, the other will be generated automatically.
+
+Here are some common typeclasses in Haskell:
 
 -typeclass: Num 
 	- types: Int, Integer, Float, Double
@@ -186,4 +210,25 @@ Here are some common typeclasses in `ghci`:
 
 -typeclass: Ord
         - types: all except IO, IOError, and functions
+
+If interested, you may check this information out: https://en.wikibooks.org/wiki/Haskell/Classes_and_types#/media/File:Base-classes.svg
+
+### Practice Exercise: What does it mean?
+
+```haskell
+
+ghci> check x y = (x+1) == y
+ghci> :t check
+check :: (Eq a, Num a) => a -> a -> Bool
+
+```
+
+As you notice, `check` is a function that takes two parameters (`x` and `y`) as input and returns the result of a comparison `==` between `x+1` and `y`.
+
+If we carefully analyze the type signature, what do we see?
+
+- x and y must belong to the `Num` and `Eq` typeclasses, i.e., they are not only numbers but also comparable for the equality operations (`==`, `/=`).
+
+Finally, we may summarize that the `check` function takes two Numbers as input and tests their Equality and returns a Bool (True/False) decision.
+ 
 
