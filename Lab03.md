@@ -17,11 +17,11 @@ Some standard data types in Haskell are: Bool, Char, String, Int, Integer, Float
 - Char: Single character, represented with single quotes
 - String: An array of characters, represented with double quotes
 - Float: Haskell's Float corresponds to single-precision (32-bit) types. 
-	- maximum: $3.4 x 10^(38)$ 
-	- minimum value $-3.4 x 10^(38)$
+	- maximum: $3.4 x 10^{38}$ 
+	- minimum value $-3.4 x 10^{38}$
 - Double: Haskell's Double to double-precision (64-bit) floating-point types.
-	- maximum: $1.8 x 10^(308)$
-	- minimum: $-1.8 x 10^(308)$
+	- maximum: $1.8 x 10^{308}$
+	- minimum: $-1.8 x 10^{308}$
 
 ```haskell
 
