@@ -281,6 +281,20 @@ ghci> sillyTask1 3 (3)
 "they are equal"
 ghci> 
 
+```
+- example 02: conditionals with **guarded expressions**
+
+```haskell
+
+abs1 x 
+    | x >= 0 = x 
+    | otherwise = (-x)
+
+
+sillyTask1 x y 
+ | (x > y) = "x is greater than y" 
+ | (y > x) = "y is greater than x" 
+ | otherwise = "both are equal"
 
 
 ```
