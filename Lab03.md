@@ -7,7 +7,7 @@
 
 ### Topic 01: Types and Typeclasses
 
-Each type is a set of values.
+a) Each type is a set of values.
 
 Some standard data types in Haskell are: Bool, Char, String, Int, Integer, Float, Double.
 
@@ -103,9 +103,10 @@ ghci>
 
 ```
 
-- Haskell has type inference.
+- Haskell has **type inference**.
 	
 	- It we write a number, Haskell (i.e. ghci) recognizes it as a number.
+
 ```haskell
 
 ghci> let exp = (5 >= 23)
@@ -158,10 +159,31 @@ ghci>
 -- makes a list containing values of a type. 
 
 ```
-** Polymorphic Function: ** 
+**Polymorphic Function:**
+ 
 - A polymorphic function in Haskell is a function that can work with values of different types. 
 	- This is achieved using type variables, which are lowercase identifiers in a type signature that can represent any type.
 
 For example: `aSampleFunction` is a polymorphic function that can deal with characters, numbers, lists.
  
+b) Typeclass:
+
+Typeclasses are sets of types
+
+Here are some common typeclasses in `ghci`:
+
+-typeclass: Num 
+	- types: Int, Integer, Float, Double
+
+-typeclass: Fractional
+	- types: Float, Double
+
+-typeclass: Integral
+	- types: Int, Integer
+
+-typeclass: RealFloat
+        - types: Float, Double
+
+-typeclass: Ord
+        - types: all except IO, IOError, and functions
 
