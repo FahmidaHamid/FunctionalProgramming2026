@@ -102,3 +102,66 @@ ghci> m
 ghci> 
 
 ```
+
+- Haskell has type inference.
+	
+	- It we write a number, Haskell (i.e. ghci) recognizes it as a number.
+```haskell
+
+ghci> let exp = (5 >= 23)
+ghci> :t exp
+exp :: Bool
+
+ghci> let d = 22 * (11 + 6.7)
+ghci> :t d
+d :: Fractional a => a
+ghci> 
+
+```
+
+#### Checking the Function Types:
+
+
+```haskell
+ghci> [1, 2, 3] ++ [4, 5]
+[1,2,3,4,5]
+ 
+ghci> :t (++)
+(++) :: [a] -> [a] -> [a] 
+
+-- interpretation: ++  takes 2 list inputs of the same type (say, a) and produces a list of the same type 
+
+```
+
+Here is another example:
+
+```haskell
+
+ghci> aSampleFunction input1 input2 = [input1, input2]
+ghci> aSampleFunction 2 3
+[2,3]
+
+ghci> aSampleFunction 2 3.5
+[2.0,3.5]
+
+ghci> aSampleFunction '2' '3'
+"23"
+
+ghci> aSampleFunction [1,2,3] [4,5]
+[[1,2,3],[4,5]]
+
+ghci> :t aSampleFunction 
+aSampleFunction :: a -> a -> [a]
+ghci> 
+
+-- interpretation: aSampleFunction takes two parameters of the same type (let’s call it a) and 
+-- makes a list containing values of a type. 
+
+```
+** Polymorphic Function: ** 
+- A polymorphic function in Haskell is a function that can work with values of different types. 
+	- This is achieved using type variables, which are lowercase identifiers in a type signature that can represent any type.
+
+For example: `aSampleFunction` is a polymorphic function that can deal with characters, numbers, lists.
+ 
+
