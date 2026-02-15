@@ -308,3 +308,59 @@ ghci> sillyTask2  (-4) 4
 "4 is greater than -4"
 
 ```
+
+
+## Topic 02: List Comprehension
+
+Haskell list comprehensions provide a concise and expressive way to create lists based on existing lists, 
+using a syntax inspired by mathematical set-builder notation.
+
+To continue the lab, let's create a file, `lab03.hs`
+
+
+```haskell
+-- task 01: square all the elements from a list and return a list
+
+squareList xs = [x^2 | x <- xs]
+
+```
+
+Now, let's reload/load the source file (`lab03.hs`) and try the following test cases:
+
+```haskell
+
+ghci> :t squareList
+squareList :: Num a => [a] -> [a]
+
+ghci> squareList []
+[]
+
+ghci> squareList [2]
+[4]
+
+ghci> squareList [-2]
+[4]
+
+ghci> squareList [-2.5]
+[6.25]
+
+ghci> squareList [1,2,3,4,5]
+[1,4,9,16,25]
+
+ghci> squareList [1,(-2),3,(-4),5]
+[1,4,9,16,25]
+
+``` 
+I assume you can guess what this function (`squareList`) does. 
+
+- from the `:t ` command, we get the idea that, `squareList` takes a list of numbers (hint: `Num`, square bracket `[]`) 
+as input and produces/returns a list of numbers.
+
+- from the definition of the function (`squareList xs = [x^2 | x <- xs]`), we get the idea that for every element `x` that we
+take from the input list `xs`, the function should produce `x^2` and put that in a new list.
+
+	- eventually the new list is returned as the output.
+	- notice that the input list and output list are of the same length.
+	- it is a convention that when we use lists, we usually name the variables like plural words: `xs`, `myList`, etc.
+
+
