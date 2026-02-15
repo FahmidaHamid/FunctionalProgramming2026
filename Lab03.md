@@ -169,8 +169,11 @@ ghci>
 - A polymorphic function in Haskell is a function that can work with values of different types. 
 	- This is achieved using type variables, which are lowercase identifiers in a type signature that can represent any type.
 
-For example: `aSampleFunction` is a polymorphic function that can deal with characters, numbers, lists.
- 
+Example:
++  `aSampleFunction` is a polymorphic function that can deal with characters, numbers, lists.
+
++ `++` is also a polymorphic function that can deal with lists of any type.
+
 #### b) Typeclass:
 
 - Typeclasses are sets of types. 
