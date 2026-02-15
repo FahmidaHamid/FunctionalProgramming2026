@@ -208,23 +208,23 @@ class  Eq a  where
 
 Here are some common typeclasses in Haskell:
 
--typeclass: Num 
+- typeclass: Num 
     
     - types: Int, Integer, Float, Double
 
--typeclass: Fractional
+- typeclass: Fractional
 
 	- types: Float, Double
 
--typeclass: Integral
+- typeclass: Integral
 
 	- types: Int, Integer
 
--typeclass: RealFloat
+- typeclass: RealFloat
 
         - types: Float, Double
 
--typeclass: Ord
+- typeclass: Ord
 
         - types: all except IO, IOError, and functions
 
@@ -251,7 +251,7 @@ check :: (Eq a, Num a) => a -> a -> Bool
 
 ### Topic 02: Conditionals
 
-- example 01: Let's define a function `sillyTask1` in a file (definition below), named `lab03.hs`
+- Example 01: Let's define a function `sillyTask1` in a file (definition below), named `lab03.hs`
 
 Notice how each condition composes multi-line instructions.
  
@@ -294,7 +294,7 @@ ghci> sillyTask1 3 (3)
 "they are equal"
 
 ```
-- example 02: conditionals with the **guarded expressions** (another and more concise way of writing functions with conditions)
+- Example 02: conditionals with the **guarded expressions** (another and more concise way of writing functions with conditions)
 
 - note: we will use the same source file, `lab03.hs`, for all the exercises for this lab.
 
@@ -323,6 +323,15 @@ ghci> sillyTask2  (-4) 4
 "4 is greater than -4"
 
 ```
+- Exercise 01:
+$
+f(x)= {█(3,x is divisible by 3@5,x is divisible by 5@7,x is divisible by 7@2,for every other case)┤
+ $
+a)	Write an equivalent function of f(x) in Haskell (all_mods_g), using guarded expressions.
+b)	Write an equivalent function of f(x) in Haskell (all_mods_f), using if-else expressions. 
+c)	Test both of your functions for at least 5 distinct values of x (e.g. 1, -7, 48, 19, 200). Copy and paste your test results in the file as multiline comments. It is better to place it right after a and b.
+
+
 
 ## Topic 03: List Comprehension
 
@@ -478,7 +487,7 @@ Define a function (`crazy_10_3`) that takes two lists (`xs` and `ys`) as input a
 	+ (a + b) is divisible by 10 or (a+ b) is divisible by 3
 
 Write 6 test cases for the function, and save the tests as multiline comment right above the `crazy_10_3` function definition 
-in the `lab03.hs` file as miltiline comment.
+in the `lab03.hs` file.
 
 
 
