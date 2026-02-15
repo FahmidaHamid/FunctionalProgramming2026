@@ -405,24 +405,23 @@ take from the input list `xs`, the function produces `x^2` and put that in a new
 
 	- it is a convention that when we use lists, we usually name the variables like plural words: `xs`, `myList`, etc.
 
-- Given all the idea, define a function, `qubingList`, that takes a list of numbers as input and qubes each element in the list and then return it.
-- Don't forget to write 6 test cases for the `qubingList` function and add them right before the definition of the function as multi-line comments.
+- Given all the idea, define a function, `cubingList`, that takes a list of numbers as input and cubes each element in the list and then return it.
+- Don't forget to write 6 test cases for the `cubingList` function and add them right before the definition of the function as multi-line comments.
 
 
 + **Exercise 03:**
 
+Save the `zip1` function in `lab03.hs` file. 
+
 ```haskell
 
--- what does zip1 do?
--- what are possible input types?
--- save it in the same lab03.hs file 
 
 zip1 xs ys = [(x, y) | x <- xs, y <- ys]
 
 
 ```
 
-Let's test `zip1`:
+Reload ghci with `lab03.hs` and test `zip1`:
 
 ```haskell
 
@@ -451,8 +450,8 @@ ghci> zip1 [1, 2, 3] ['a', 'b', 'c']
 [(1,'a'),(1,'b'),(1,'c'),(2,'a'),(2,'b'),(2,'c'),(3,'a'),(3,'b'),(3,'c')]
 
 ```
-Answer the following questions (write the responses to the questions right above the function definition in `lab03.hs` as 
-multi-line comment):
+Now, answer the following questions:
+	- (write the responses to the questions right above the `zip1` function definition in `lab03.hs` as  multi-line comment):
 
 Questions for you:
 
@@ -480,7 +479,7 @@ answer the following questions:
 	+ Is `tryMe` a polymorphic function?
 	+ What does `tryMe` do?
 
-Write your responses as multi-line comments right before the definition of `tryMe` in `lab03.hs` file.
+Write your responses as multi-line comments right before the definition of `tryMe` in the `lab03.hs` file.
 
 + **Exercise 05:**
 
@@ -497,7 +496,7 @@ answer the questions below:
 
         + Write 6 test cases for the `trial_and_error10` function.
         + What type of data can this function handle?
-        + Is `trial_and_error` a polymorphic function?
+        + Is `trial_and_error10` a polymorphic function?
         + What does `trial_and_error10` do?
 
 Write your responses as multi-line comments right before the definition of `trial_and_error10` in `lab03.hs` file.
@@ -516,7 +515,7 @@ in the `lab03.hs` file.
 
 + **Exercise 07:**
 
-The library (built-in) function `zip` produces a new list by pairing successive elements from two existing lists.
+The library (built-in, already available) function `zip` produces a new list by pairing successive elements from two existing lists.
 
 Example:
 ```haskell
@@ -547,6 +546,8 @@ pairs xs =
 Also, write 6 test cases.
 
 hint: you should test each expression separately to understand what `pairs` function does.
+
+Save the answers as multiline comments for the problem in `lab03.hs` file.
  
 + **Exercise 08:**
 
@@ -624,3 +625,13 @@ ghci>
 
 ``` 
 Provide 6 test cases (exclude the given ones).
+
+## Submission:
+
+	- Submit `lab03.hs` on Canvas.
+	- Each problem worths 10 points.
+
+
+### End Note: Keep practicing. Please go over the examples from your textbook (LearnYouAHaskellForGreatGood).
+
+ 
