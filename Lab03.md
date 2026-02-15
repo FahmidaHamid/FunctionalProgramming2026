@@ -230,7 +230,7 @@ Here are some common typeclasses in Haskell:
 
 If interested, you may check this information out: https://en.wikibooks.org/wiki/Haskell/Classes_and_types#/media/File:Base-classes.svg
 
-**Practice Exercise: What does it mean?**
+**Practice Exercise: What does it do?**
 
 ```haskell
 
@@ -327,7 +327,8 @@ ghci> sillyTask2  (-4) 4
 ```
 - **Exercise 01:**
 
-$
+```math
+$$
 f(x) =
 \begin{cases}
   3 & \text{if } x is divisible by 3 \\
@@ -335,7 +336,8 @@ f(x) =
   7 & \text{if } x is divisible by 7 \\
   0 & \text{otherwise}
 \end{cases}
-$
+$$
+```
 
 - Write an equivalent function of $f(x)$ in Haskell (`all_mods_g`), using guarded expressions.
 - Write an equivalent function of $f(x)$ in Haskell (`all_mods_f`), using if-else expressions. 
