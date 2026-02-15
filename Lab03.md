@@ -326,7 +326,7 @@ ghci> sillyTask2  (-4) 4
 
 ```
 - **Exercise 01:**
-```
+
 $
 f(x) =
 \begin{cases}
@@ -336,10 +336,10 @@ f(x) =
   0 & \text{otherwise}
 \end{cases}
 $
-```
-	- Write an equivalent function of $f(x)$ in Haskell (`all_mods_g`), using guarded expressions.
-	- Write an equivalent function of $f(x)$ in Haskell (`all_mods_f`), using if-else expressions. 
-	- Test both of your functions for at least 5 distinct values of x (e.g. 1, -7, 48, 19, 200). 
+
+- Write an equivalent function of $f(x)$ in Haskell (`all_mods_g`), using guarded expressions.
+- Write an equivalent function of $f(x)$ in Haskell (`all_mods_f`), using if-else expressions. 
+- Test both of your functions for at least 5 distinct values of x (e.g. 1, -7, 48, 19, 200). 
 
 Copy and paste your test results in the same file,right before the function definitions, as multiline comments. 
 
