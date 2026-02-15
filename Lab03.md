@@ -331,9 +331,9 @@ ghci> sillyTask2  (-4) 4
 $$
 f(x) =
 \begin{cases}
-  3 & \text{if } x is divisible by 3 \\
-  5 & \text{if } x is divisible by 5 \\
-  7 & \text{if } x is divisible by 7 \\
+  3 & \text{if } x \text{ is divisible by } 3 \\
+  5 & \text{if } x \text{ is divisible by } 5 \\
+  7 & \text{if } x \text{ is divisible by } 7 \\
   0 & \text{otherwise}
 \end{cases}
 $$
