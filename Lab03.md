@@ -90,7 +90,8 @@ ghci>
 
 ``` 
 - A rational number may be constructed using the % operator.
-	- Arbitrary-precision rational numbers, represented as a ratio of two Integer values. 
+
+	- Arbitrary-precision rational numbers are represented as a ratio of two Integer values. 
 
 ```haskell
 
@@ -107,7 +108,9 @@ ghci>
 
 - Haskell has **type inference**.
 	
-	- It we write a number, Haskell (i.e. ghci) recognizes it as a number.
+	- If we write a number, Haskell (i.e. ghci) recognizes it as a number.
+
+	- If we write a logical expression, it recognizes that as `Bool`.
 
 ```haskell
 
@@ -183,18 +186,22 @@ For example: `aSampleFunction` is a polymorphic function that can deal with char
 class  Eq a  where
    (==), (/=) :: a -> a -> Bool
 
-       -- Minimal complete definition:
-       --      (==) or (/=)
+-- Minimal complete definition:
+--      (==) or (/=)
+
    x /= y     =  not (x == y)
    x == y     =  not (x /= y)
 
 ```
-The definition states that if a type `a` is to be made an instance of the class `Eq` it must support the functions (==) and (/=) 
-   - the class methods - both of them having type a -> a -> Bool. 
 
-Additionally, the class provides default definitions for (==) and (/=) in terms of each other.
++ The definition states that if a type `a` is to be made an instance of the class `Eq`, it must support the functions (==) and (/=) 
+
++ the class methods (`==` and `/=`),  have type a -> a -> Bool which means the two inputs are of type `a` and the output is a `Bool`.
  
-As a consequence, there is no need for a type in `Eq` to provide both definitions - given one of them, the other will be generated automatically.
++ Additionally, the class provides default definitions for (==) and (/=) in terms of each other.
+ 
+	+ As a consequence, there is no need for a type in `Eq` to provide both definitions - given one of them, the other will be generated automatically.
+
 
 Here are some common typeclasses in Haskell:
 
@@ -230,16 +237,16 @@ check :: (Eq a, Num a) => a -> a -> Bool
 
 ```
 
-As you notice, `check` is a function that takes two parameters (`x` and `y`) as input and returns the result of a comparison `==` between `x+1` and `y`.
++ As you notice, `check` is a function that takes two parameters (`x` and `y`) as input and returns the result of a comparison `==` between `x+1` and `y`.
 
-If we carefully analyze the type signature, what do we see?
++ If we carefully analyze the type signature, what do we see?
 
-- x and y must belong to the `Num` and `Eq` typeclasses, i.e., they are not only numbers but also comparable for the equality operations (`==`, `/=`).
+	+ x and y must belong to the `Num` and `Eq` typeclasses, i.e., they are not only numbers but also comparable for the equality operations (`==`, `/=`).
 
-Finally, we may summarize that the `check` function takes two Numbers as input and tests their Equality and returns a Bool (True/False) decision.
++ Finally, we may summarize that the `check` function takes two Nums as input and tests their Equality and returns a Bool (True/False) decision.
  
 
-### Topic 02) Conditionals
+### Topic 02: Conditionals
 
 - example 01: Let's define a function `sillyTask1` in a file (definition below), named `lab03.hs`
 
@@ -261,7 +268,7 @@ sillyTask1 x y =
 
 
 ```
-Here is how I tested it:
+Here is how we can test it:
 
 ```haskell
 
@@ -269,20 +276,24 @@ fhamid@NSCHNS172 Codes % ghci lab03.hs
 GHCi, version 9.6.7: https://www.haskell.org/ghc/  :? for help
 [1 of 2] Compiling Main             ( lab03.hs, interpreted )
 Ok, one module loaded.
+
 ghci> sillyTask1 3 5
 5
 "is greater than "
 3
+
 ghci> sillyTask1 3 (-5)
 3
 "is greater than "
 -5
+
 ghci> sillyTask1 3 (3)
 "they are equal"
-ghci> 
 
 ```
-- example 02: conditionals with **guarded expressions**
+- example 02: conditionals with the **guarded expressions** (another and more concise way of writing functions with conditions)
+
+- note: we will use the same source file, `lab03.hs`, for all the exercises for this lab.
 
 ```haskell
 
@@ -294,7 +305,8 @@ sillyTask2 x y
     | otherwise = "they are equal"
 
 ```
-and here is how we test it:
+
+Here is how we test it:
 
 ```haskell
 
@@ -309,23 +321,23 @@ ghci> sillyTask2  (-4) 4
 
 ```
 
-
-## Topic 02: List Comprehension
+## Topic 03: List Comprehension
 
 Haskell list comprehensions provide a concise and expressive way to create lists based on existing lists, 
 using a syntax inspired by mathematical set-builder notation.
 
-To continue the lab, let's create a file, `lab03.hs`
+To continue the lab, let's reuse the same, `lab03.hs`, file.
 
 
 ```haskell
+
 -- task 01: square all the elements from a list and return a list
 
 squareList xs = [x^2 | x <- xs]
 
 ```
 
-Now, let's reload/load the source file (`lab03.hs`) and try the following test cases:
+Now, let's reload the source file (`lab03.hs`) and try the following test cases:
 
 ```haskell
 
@@ -351,16 +363,18 @@ ghci> squareList [1,(-2),3,(-4),5]
 [1,4,9,16,25]
 
 ``` 
-I assume you can guess what this function (`squareList`) does. 
+I assume you can guess what this function (`squareList`) does. Here is my explanation:
 
-- from the `:t ` command, we get the idea that, `squareList` takes a list of numbers (hint: `Num`, square bracket `[]`) 
+- from the `:t ` command, we get the idea that, `squareList` takes a list of numbers (hint: `Num` and square bracket `[]`) 
 as input and produces/returns a list of numbers.
 
 - from the definition of the function (`squareList xs = [x^2 | x <- xs]`), we get the idea that for every element `x` that we
-take from the input list `xs`, the function should produce `x^2` and put that in a new list.
+take from the input list `xs`, the function produces `x^2` and put that in a new list.
 
 	- eventually the new list is returned as the output.
+
 	- notice that the input list and output list are of the same length.
+
 	- it is a convention that when we use lists, we usually name the variables like plural words: `xs`, `myList`, etc.
 
 
