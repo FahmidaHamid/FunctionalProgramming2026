@@ -161,7 +161,7 @@ aSampleFunction :: a -> a -> [a]
 ghci> 
 
 -- interpretation: aSampleFunction takes two parameters of the same type (let’s call it a) and 
--- makes a list containing values of a type. 
+-- makes a list containing values of `a` type. 
 
 ```
 **Polymorphic Function:**
@@ -222,15 +222,15 @@ Here are some common typeclasses in Haskell:
 
 - typeclass: RealFloat
 
-        - types: Float, Double
+	- types: Float, Double
 
 - typeclass: Ord
 
-        - types: all except IO, IOError, and functions
+	- types: all except IO, IOError, and functions
 
 If interested, you may check this information out: https://en.wikibooks.org/wiki/Haskell/Classes_and_types#/media/File:Base-classes.svg
 
-### Practice Exercise: What does it mean?
+**Practice Exercise: What does it mean?**
 
 ```haskell
 
@@ -251,9 +251,9 @@ check :: (Eq a, Num a) => a -> a -> Bool
 
 ### Topic 02: Conditionals
 
-- Example 01: Let's define a function `sillyTask1` in a file (definition below), named `lab03.hs`
+- **Example 01:** Let's define a function `sillyTask1` in a file, named `lab03.hs`. The definition of `sillyTask1` is 
+given below:
 
-Notice how each condition composes multi-line instructions.
  
 ```haskell
 
@@ -269,9 +269,11 @@ sillyTask1 x y =
     else
        print "they are equal"
 
+-- note: some cnditions contain miltiple statements in it.
 
 ```
-Here is how we can test it:
+
+Now let's test it:
 
 ```haskell
 
@@ -294,7 +296,7 @@ ghci> sillyTask1 3 (3)
 "they are equal"
 
 ```
-- Example 02: conditionals with the **guarded expressions** (another and more concise way of writing functions with conditions)
+- **Example 02:** conditionals with the **guarded expressions** (another and more concise way of writing functions with conditions)
 
 - note: we will use the same source file, `lab03.hs`, for all the exercises for this lab.
 
@@ -323,15 +325,22 @@ ghci> sillyTask2  (-4) 4
 "4 is greater than -4"
 
 ```
-- Exercise 01:
-$
-f(x)= {█(3,x is divisible by 3@5,x is divisible by 5@7,x is divisible by 7@2,for every other case)┤
- $
-a)	Write an equivalent function of f(x) in Haskell (all_mods_g), using guarded expressions.
-b)	Write an equivalent function of f(x) in Haskell (all_mods_f), using if-else expressions. 
-c)	Test both of your functions for at least 5 distinct values of x (e.g. 1, -7, 48, 19, 200). Copy and paste your test results in the file as multiline comments. It is better to place it right after a and b.
+- **Exercise 01:**
 
+$$
+f(x) =
+\begin{cases}
+  3 & \text{if } x is divisible by 3 \\
+  5 & \text{if } x is divisible by 5 \\
+  7 & \text{if } x is divisible by 7 \\
+  0 & \text{otherwise}
+\end{cases}
+$$
+	- Write an equivalent function of $f(x)$ in Haskell (`all_mods_g`), using guarded expressions.
+	- Write an equivalent function of $f(x)$ in Haskell (`all_mods_f`), using if-else expressions. 
+	- Test both of your functions for at least 5 distinct values of x (e.g. 1, -7, 48, 19, 200). 
 
+Copy and paste your test results in the same file,right before the function definitions, as multiline comments. 
 
 ## Topic 03: List Comprehension
 
@@ -340,7 +349,9 @@ using a syntax inspired by mathematical set-builder notation.
 
 To continue the lab, let's reuse the same, `lab03.hs`, file.
 
-+ Exercise 02:
++ **Exercise 02:**
+
+Save the `squareList` function stated below in `lab03.hs`.
 
 ```haskell
 
@@ -350,7 +361,7 @@ squareList xs = [x^2 | x <- xs]
 
 ```
 
-Now, let's reload the source file (`lab03.hs`) and try the following test cases:
+Now, let's reload the source file (`lab03.hs`) with `ghci` and try the following test cases:
 
 ```haskell
 
@@ -376,6 +387,7 @@ ghci> squareList [1,(-2),3,(-4),5]
 [1,4,9,16,25]
 
 ``` 
+
 I assume you can guess what this function (`squareList`) does. Here is my explanation:
 
 - from the `:t ` command, we get the idea that, `squareList` takes a list of numbers (hint: `Num` and square bracket `[]`) 
@@ -390,8 +402,11 @@ take from the input list `xs`, the function produces `x^2` and put that in a new
 
 	- it is a convention that when we use lists, we usually name the variables like plural words: `xs`, `myList`, etc.
 
+- Given all the idea, define a function, `qubingList`, that takes a list of numbers as input and qubes each element in the list and then return it.
+- Don't forget to write 6 test cases for the `qubingList` function and add them right before the definition of the function as multi-line comments.
 
-+ Exercise 03:
+
++ **Exercise 03:**
 
 ```haskell
 
@@ -442,11 +457,12 @@ Questions for you:
 	 + Note: in Haskell, and also in many other programming languages, `(a,b)` means a tuple (ordered pair).
  + Do the two input lists have to be of same length for `zip1`?
  + Is `zip1` a polymorhic function?
+ + Write your responses as multi-line comments right before the definition of `zip1` in `lab03.hs` file.
 
 
-+ Exercise 04:
++ **Exercise 04:**
 
-Given the definition,
+Given the definition of `tryMe`,
 
 ```haskell
 
@@ -454,14 +470,16 @@ tryMe xs = [(x-1, x, x+1)| x <- xs, x `mod` 2 == 0]
 
 
 ```
-answer the questions below:
+answer the following questions:
 
 	+ Write 6 test cases for the `tryMe` function.
 	+ What type of data can this function handle?
 	+ Is `tryMe` a polymorphic function?
 	+ What does `tryMe` do?
 
-+ Exercise 05:
+Write your responses as multi-line comments right before the definition of `tryMe` in `lab03.hs` file.
+
++ **Exercise 05:**
 
 Given the following definition,
 
@@ -479,7 +497,9 @@ answer the questions below:
         + Is `trial_and_error` a polymorphic function?
         + What does `trial_and_error10` do?
 
-+ Exercise 06:
+Write your responses as multi-line comments right before the definition of `trial_and_error10` in `lab03.hs` file.
+
++ **Exercise 06:**
 
 Define a function (`crazy_10_3`) that takes two lists (`xs` and `ys`) as input and produces tuples `(a, b)` such that 
 	+ a is an element from xs
@@ -491,7 +511,7 @@ in the `lab03.hs` file.
 
 
 
-+ Exercise 07:
++ **Exercise 07:**
 
 The library (built-in) function `zip` produces a new list by pairing successive elements from two existing lists.
 
@@ -523,11 +543,11 @@ pairs xs =
 ```
 Also, write 6 test cases.
 
-hint: you should test each expression separately to understand what `pairs` function is suppossed to do.
+hint: you should test each expression separately to understand what `pairs` function does.
  
-+ Exercise 08:
++ **Exercise 08:**
 
-Define a function, `coupleToSingle`, that constructs a list/string by adding the values from each tuple of the input list.
+Define a function, `coupleToSingle`, that constructs a list by adding the values from each tuple of the input list.
 
 ```haskell
 
@@ -543,7 +563,7 @@ ghci>
 ```
 Provide 6 test cases (exclude the given ones).
 
-+ Exercise 09:
++ **Exercise 09:**
 
 Consider Exercise 09 as an extension of Exercise 08. 
 
@@ -582,7 +602,7 @@ process_value input = result
 
 ``` 
 
-+ Exercise 10:
++ **Exercise 10:**
 
 Consider Exercise 10 as an extension of Exercise 09. In exercise 9, we returned the summation of the pairs that are odd.
 Now, we want to return the pairs/tuples that are odd (not the summation).
