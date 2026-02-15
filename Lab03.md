@@ -331,6 +331,7 @@ using a syntax inspired by mathematical set-builder notation.
 
 To continue the lab, let's reuse the same, `lab03.hs`, file.
 
++ Exercise 02:
 
 ```haskell
 
@@ -379,5 +380,105 @@ take from the input list `xs`, the function produces `x^2` and put that in a new
 	- notice that the input list and output list are of the same length.
 
 	- it is a convention that when we use lists, we usually name the variables like plural words: `xs`, `myList`, etc.
+
+
++ Exercise 03:
+
+```haskell
+
+-- what does zip1 do?
+-- what are possible input types?
+-- save it in the same lab03.hs file 
+
+zip1 xs ys = [(x, y) | x <- xs, y <- ys]
+
+
+```
+
+Let's test `zip1`:
+
+```haskell
+
+ghci> :t zip1
+zip1 :: [a] -> [b] -> [(a, b)]
+
+ghci> zip1 [] []
+[]
+
+ghci> zip1 [1] []
+[]
+
+ghci> zip1 [1] ['a']
+[(1,'a')]
+
+ghci> zip1 [1] ['a', 'b']
+[(1,'a'),(1,'b')]
+
+ghci> zip1 [1, 2] ['a', 'b']
+[(1,'a'),(1,'b'),(2,'a'),(2,'b')]
+
+ghci> zip1 [1, 2, 3] ['a', 'b']
+[(1,'a'),(1,'b'),(2,'a'),(2,'b'),(3,'a'),(3,'b')]
+
+ghci> zip1 [1, 2, 3] ['a', 'b', 'c']
+[(1,'a'),(1,'b'),(1,'c'),(2,'a'),(2,'b'),(2,'c'),(3,'a'),(3,'b'),(3,'c')]
+
+```
+Answer the following questions (write the responses to the questions right above the function definition in `lab03.hs` as 
+multi-line comment):
+
+Questions for you:
+
+ + What does `zip1` do?
+	 + Note: in Haskell, and also in many other programming languages, `(a,b)` means a tuple (ordered pair).
+ + Do the two input lists have to be of same length for `zip1`?
+ + Is `zip1` a polymorhic function?
+
+
++ Exercise 04:
+
+Given the definition,
+
+```haskell
+
+tryMe xs = [(x-1, x, x+1)| x <- xs, x `mod` 2 == 0]
+
+
+```
+answer the questions below:
+
+	+ Write 6 test cases for the `tryMe` function.
+	+ What type of data can this function handle?
+	+ Is `tryMe` a polymorphic function?
+	+ What does `tryMe` do?
+
++ Exercise 05:
+
+Given the following definition,
+
+```haskell
+
+trial_and_error10 xs ys = 
+       [(x, y) | x <-xs, y <- ys, (x + y) `mod` 10 == 0 ]
+
+
+```
+answer the questions below:
+
+        + Write 6 test cases for the `trial_and_error10` function.
+        + What type of data can this function handle?
+        + Is `trial_and_error` a polymorphic function?
+        + What does `trial_and_error10` do?
+
++ Exercise 06:
+
+Define a function (`crazy_10_3`) that takes two lists (`xs` and `ys`) as input and produces tuples `(a, b)` such that 
+	+ a is an element from xs
+	+ b is an element from ys
+	+ (a + b) is divisible by 10 or (a+ b) is divisible by 3
+
+Write 6 test cases for the function, and save the tests as multiline comment right above the `crazy_10_3` function definition 
+in the `lab03.hs` file as miltiline comment.
+
 
 
