@@ -491,3 +491,113 @@ in the `lab03.hs` file.
 
 
 
++ Exercise 07:
+
+The library (built-in) function `zip` produces a new list by pairing successive elements from two existing lists.
+
+Example:
+```haskell
+
+ghci> zip ['a', 'b', 'c'] [1,3]
+[('a',1),('b',3)]
+
+ghci> zip [1..5] [6..10]
+[(1,6),(2,7),(3,8),(4,9),(5,10)]
+
+ghci> zip ['a', 'b', 'c'] [1, 2, 5]
+[('a',1),('b',2),('c',5)]
+
+ghci> 
+
+```
+Now test the following function (`pairs`) and write a short description of the function.
+
+```haskell
+
+pairs xs =
+
+ zip
+     (drop ((length xs) `div` 3) xs)
+     (take ((length xs) `div` 3) xs)
+
+```
+Also, write 6 test cases.
+
+hint: you should test each expression separately to understand what `pairs` function is suppossed to do.
+ 
++ Exercise 08:
+
+Define a function, `coupleToSingle`, that constructs a list/string by adding the values from each tuple of the input list.
+
+```haskell
+
+-- sample test cases
+ghci> coupleToSingle []
+[]
+ghci> coupleToSingle [(1,0), (2, 1), (3, 7)]
+[1,3,10]
+ghci> coupleToSingle [(1,0), (2, 2)]
+[1,4]
+ghci> 
+
+```
+Provide 6 test cases (exclude the given ones).
+
++ Exercise 09:
+
+Consider Exercise 09 as an extension of Exercise 08. 
+
+Define a function `onlyOddCouples` that constructs a list/string by adding the values from each tuple of the input list
+but only keeps the added value if it is odd.
+
+You may define it independently or take/use `coupleToSingle` as part of the solution.
+
+```haskell
+
+ghci> onlyOddCouples [(2,2)]
+[] 
+
+ghci> onlyOddCouples [(2,1), (2,2)]
+[3]
+
+ghci> onlyOddCouples [(2,1), (2,2), (5, 2)]
+[3,7]
+
+ghci> onlyOddCouples [(2,1), (2,2), (5, 2), (10, 2)]
+[3,7]
+
+```
+hint: You may want to check how to use `where` keyword. Below is an example of a function with `where` in it.
+
+```haskell
+
+-- a test function that uses where to store intermediate results
+
+process_value input = result
+  where
+    step1 = input + 5
+    step2 = step1 * 2
+    step3 = step2 - 1
+    result = step3 `div` 3
+
+``` 
+
++ Exercise 10:
+
+Consider Exercise 10 as an extension of Exercise 09. In exercise 9, we returned the summation of the pairs that are odd.
+Now, we want to return the pairs/tuples that are odd (not the summation).
+
+```haskell
+
+ghci> theseAreTheOddCouples  [(2,2), (10, 2)]
+[]  
+
+ghci> theseAreTheOddCouples  [(2,1), (2,2), (5, 2), (10, 2)]
+[(2,1),(5,2)]
+
+ghci> theseAreTheOddCouples  [(2,2), (10, 2), (9, 11), (7, 6)]
+[(7,6)]
+ghci> 
+
+``` 
+Provide 6 test cases (exclude the given ones).
