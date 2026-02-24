@@ -377,3 +377,59 @@ ghci> zipify [1, 2, 3] ['a', 'b', 'c']
 [(1,'a'),(2,'b'),(3,'c')]
 
 ```
+
+### Exercise 08:
+
+Define a function `compareTwoLists` that compares two lists and tells us which one has more elements. Use recursion.
+
+- Note that you are not allowed to use the `length` function.
+
+```haskell
+ghci> compareTwoLists [1,2,3] ['a']
+"The first list is longer"
+ghci> compareTwoLists [1,2,3] ['a', 'b', 'c']
+"Both lists are of same size."
+ghci> compareTwoLists [] ['a', 'b', 'c']
+"The second list is longer"
+ghci>
+
+```
+
+### Exercise 09:
+
+With the help of `compareTwoLists`, define another function `compareAndRetLonger` that returns the longer list as output.
+
+```haskell
+ghci> compareAndRetLonger "Hello World" [1,2, 3, 4]
+"Hello World"
+ghci> compareAndRetLonger "Hello World" [1..100]
+[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100]
+ghci> compareAndRetLonger "H" [1]
+"H"
+ghci>
+
+```
+
+- Note: If the two list contains different types of data, you may want to use `print` function while returning the final outcome.
+
+### Exercise 10:
+
+Given a `list` of any type and a `key` (of the same type), a function `frequencyCounter` finds the frequency of the `key` in the input list.
+Use recursion.
+
+```haskell
+-- sample test cases
+
+ghci> frequencyCounter "Hello World" 'l'
+3
+ghci> frequencyCounter "Hello World" 'q'
+0
+ghci> frequencyCounter [1, 1, 1,1 ,1,1] 1
+6
+ghci> frequencyCounter [] 5
+0
+ghci> frequencyCounter [5, 2,3,4,5] 5
+2
+ghci>
+
+```
