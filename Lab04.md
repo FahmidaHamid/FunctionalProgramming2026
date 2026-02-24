@@ -75,17 +75,17 @@ ghci>
 
 ```haskell
 
-[step 0]: sumList [-1, 1, 2 , 3]
+[step 0]: sumList [-1, 1, 2 , 3]          <-------check step 9 -------->
 
-    [step 1]: -1 + sumList [1, 2 , 3]
+    [step 1]: -1 + sumList [1, 2 , 3]       <------- check step 8 ------->
 
-            [step 2]: 1 +  sumList [2 , 3]
+            [step 2]: 1 +  sumList [2 , 3]    <----- check step 7 ----->
 
-                [step 3]: 2 + sumList [3]
+                [step 3]: 2 + sumList [3]      <---- check step 6 ---->
 
-                    [step 4]: 3 + sumList []
+                    [step 4]: 3 + sumList []    <---- check step 5 ---->
 
-                    [step 5]: 3 + 0 --base case
+                    [step 5]: 3 + 0       -- base case
 
                 [step 6]: 2 + 3
 
@@ -157,7 +157,7 @@ ghci>
 
 - So what does `minimum'` do?
 
-- It takes a list containing `Ord` type data (values that belong to Ord type class, in other words, values that are comparable) as input and returns the minimum of them.
+- It takes a list containing `Ord` type data (values that belong to `Ord` type class, in other words, values that are comparable) as input and returns the minimum of them.
 
 - If we try to understand the definition of the function, we should read it like the following:
   - **Base Case:** If the list is has **only one element**, then return that element as minimum.
