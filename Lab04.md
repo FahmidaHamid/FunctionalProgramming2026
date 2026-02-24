@@ -295,11 +295,11 @@ factorialTR p = go p 1
 
 Answer the following questions:
 
-- a) Does `factorial` and `factorialTR` do the same thing?
+- a) Do `factorial` and `factorialTR` do the same thing?
 
-- b) Do you notice any fundamental difference between the two approaches?
+- b) Do you notice any fundamental differences between the two approaches?
 
-[Hint: Tail Recursion, will discuss it after the exam].
+**[Hint: Tail Recursion, will discuss it after the exam]**
 
 ### Exercise 06:
 
@@ -320,7 +320,7 @@ ghci>
 
 ```
 
-Without using the help of built-in `head` or `tail` function, define a function `newTail` that does the same task.
+Without using the help of built-in `head` or `tail` function, define a function `newTail` that does the same as `tail` function.
 
 ```haskell
 ghci> newTail [1,2,3]
@@ -329,5 +329,51 @@ ghci> newTail [1]
 []
 ghci> newTail []
 *** Exception: <interactive>:10:5-23: Non-exhaustive patterns in function newTail
+
+```
+
+### Exercise 07:
+
+The `zip` function (already defined in Prelude) combines two lists into a single list of pairs (tuples) by matching elements at the same position.
+
+- Pairing Strategy: It takes the first element from each list and puts them into a tuple, then the second element from each, and so on.
+
+- Handling Different Lengths: If the input lists are of different lengths, zip stops as soon as the shorter list is exhausted, discarding any remaining elements from the longer list.
+
+- Immutability: It does not modify the original lists; instead, it returns a brand new list of tuples.
+
+```haskell
+ghci> zip [] []
+[]
+
+ghci> zip [1..5] []
+[]
+
+ghci> zip [1..5] [3..10]
+[(1,3),(2,4),(3,5),(4,6),(5,7)]
+
+ghci> zip [1,2,3] ["apple", "orange", "strawberry"]
+[(1,"apple"),(2,"orange"),(3,"strawberry")]
+
+```
+
+Without taking help from the `zip` function, define `zipify` that does the same task as `zip`. Use recursion.
+
+```haskell
+-- sample test cases
+ghci> zipify [] []
+[]
+ghci> zipify ['a'] []
+[]
+ghci> zipify ['a'] [1]
+[('a',1)]
+ghci> zipify [1] [1]
+[(1,1)]
+ghci> zipify [1, 2] [1]
+[(1,1)]
+ghci> zipify [1, 2] [1, 2]
+[(1,1),(2,2)]
+ghci> zipify [1, 2, 3] ['a', 'b', 'c']
+[(1,'a'),(2,'b'),(3,'c')]
 
 ```
