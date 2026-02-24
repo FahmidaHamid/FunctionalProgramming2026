@@ -98,3 +98,12 @@ ghci>
 - The final computed result is 5
 
 ```
+
+- I hope the basic idea is clear; here is my explanation:
+  - The input is broken down to smaller parts until it reaches/hits possible base cases.
+
+  - Once the data hits the base cases, the function immidiately knows what to return.
+
+  - Then the function uses the outcome of the latest stage to compute the result for the next stage using specified formula.
+
+- Example: The base case is when the list is empty, return `0`. Then it adds the returned value from the immediate previous stage to compute the result for the current stage. Once the function reaches the top stage, it alredy has the outcome computed.
