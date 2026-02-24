@@ -168,7 +168,7 @@ ghci>
 
 Now that we have seen a few examples, let's start solving some problems on our own:
 
-### Exercise 01
+### Exercise 01:
 
 - Define a function `productList` using a recursive approach that takes a list of numbers and returns their product. If the list is empty, the function should return 1. Ensure it handles both integers and floats.
 
@@ -225,7 +225,6 @@ ghci> reverseList ([100, 20] ++ [1..5])
 
 ```
 
-
 ### Exercise 03:
 
 In the last class/ lab, you handled lists and used list comprehension to produce new lists with various properties. `doubleList` is one such example that takes a list of numbers as input and produces a new list where each number in the original list is doubled.
@@ -238,7 +237,7 @@ ghci> doubleMyList [1]
 [2]
 ghci> doubleMyList [-1, 3]
 [-2,6]
-ghci> 
+ghci>
 
 ```
 
@@ -258,3 +257,46 @@ ghci> doubleListRecursive [-1.5,-2.5,-3.33]
 [-3.0,-5.0,-6.66]
 
 ```
+
+### Exercise 04:
+
+Given the following function, write 6 test cases and add them to your `lab04.hs` file as multiline comments (right before the definition):
+
+```haskell
+
+factorial p
+   | (p < 0) = error "pls no negative input!"
+   | (p == 0) = 1
+   | otherwise = p * factorial (p-1)
+
+```
+
+Answer the additional questions after the test cases as well:
+
+    - a) Is `factorial` a recursive function?
+    - b) What does it do?
+    - c) What is/are the base case(s) [if any]?
+
+### Exercise 05:
+
+Here is another similar function definition (exercise 04).
+
+```haskell
+
+factorialTR p = go p 1
+
+         where
+                 go 0 n = n
+                 go p n
+                   | p > 0 = go (p-1) (p * n)
+                   | otherwise = error "pls, no negative input!"
+
+```
+
+Answer the following questions:
+
+- a) Does `factorial` and `factorialTR` do the same thing?
+
+- b) Do you notice any fundamental difference between the two approaches?
+
+[Hint: Tail Recursion, will discuss it after the exam].
