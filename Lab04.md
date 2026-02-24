@@ -162,6 +162,6 @@ ghci>
 - If we try to understand the definition of the function, we should read it like the following:
   - **Base Case:** If the list is has **only one element**, then return that element as minimum.
 
-  - **Recursive Case:** If the list is non-empty and the first two elements in the list are $x$ and $y$, and the rest of the list is $rest$ then compare $x$ to $y$ and depending on the smaller one between the two, call the same function `minimum'` on a new list that has the smaller one and $xs$.
+  - **Recursive Case:** If the list is non-empty and the first two elements in the list are $x$ and $y$, and the rest of the list is $rest$ then compare $x$ to $y$ and depending on the smaller one between the two, call the same function `minimum'` on a new list that has the smaller one and $rest$.
 
 - note that Prelude has already a defined function called `minimum` which does the same task. Hence we used a slightly different name for our function.
