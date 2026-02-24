@@ -15,9 +15,9 @@
 Definitions in mathematics are often given recursively.
 
 ```math
-f(x) = 2 * f(x-1) + c \\
+f(x) = 2 * f(x-1) + c \\\\
 
-g(y) = g(y/2) + log_n
+g(y) = g(y/2) + log_n \\\\
 
 ```
 
