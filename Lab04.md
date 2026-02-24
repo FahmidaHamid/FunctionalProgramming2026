@@ -75,24 +75,24 @@ ghci>
 
 ```haskell
 
-sumList [-1, 1, 2 , 3]
+0: sumList [-1, 1, 2 , 3]
 
-    -> -1 + sumList [1, 2 , 3]
+    1: -1 + sumList [1, 2 , 3]
 
-            -> 1 +  sumList [2 , 3]
+            2: 1 +  sumList [2 , 3]
 
-                -> 2 + sumList [3]
+                3: 2 + sumList [3]
 
-                    -> 3 + sumList []
+                    4: 3 + sumList []
 
-                    -> 3 + 0
+                    5: 3 + 0 --base case
 
-                -> 2 + 3
+                6: 2 + 3
 
-            -> 1 + 5
+            7: 1 + 5
 
-        -> -1 + 6
-    -> 5
+        8: -1 + 6
+    9: 5
 
 - The final computed result is 5
 
