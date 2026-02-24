@@ -33,6 +33,8 @@ For this lab, let us create a **source file** called `lab04<LASTNAME>.hs`, where
 
 ```haskell
 
+-- sumList function
+
 sumList [] = 0
 sumList (x: xs) = x + sumList xs
 
@@ -68,3 +70,30 @@ ghci>
 - If we try to understand the definition of the function, we should read it like the following:
   - **Base Case:** If the list is empty, then return 0
   - **Recursive Case:** If the list is non-empty and the first element in the list is $x$ and the rest of the list is $xs$ then add $x$ to the `sumList` of $xs$.
+
+### How does the process work:
+
+```test
+
+sumList [-1, 1, 2 , 3]
+
+    -> -1 + sumList [1, 2 , 3]
+
+            -> 1 +  sumList [2 , 3]
+
+                -> 2 + sumList [3]
+
+                    -> 3 + sumList []
+
+                    -> 3 + 0
+
+                -> 2 + 3
+
+            -> 1 + 5
+
+        -> -1 + 6
+    -> 5
+
+- The final computed result is 5
+
+```
