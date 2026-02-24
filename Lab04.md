@@ -300,3 +300,34 @@ Answer the following questions:
 - b) Do you notice any fundamental difference between the two approaches?
 
 [Hint: Tail Recursion, will discuss it after the exam].
+
+### Exercise 06:
+
+The standard Prelude has a function called `tail`. It returns the tail of a list (chops off the head of the list).
+
+```haskell
+ghci> tail [1,2,3]
+[2,3]
+ghci> tail [1]
+[]
+ghci> tail []
+*** Exception: Prelude.tail: empty list
+CallStack (from HasCallStack):
+  error, called at libraries/base/GHC/List.hs:1644:3 in base:GHC.List
+  errorEmptyList, called at libraries/base/GHC/List.hs:130:28 in base:GHC.List
+  tail, called at <interactive>:9:1 in interactive:Ghci9
+ghci>
+
+```
+
+Without using the help of built-in `head` or `tail` function, define a function `newTail` that does the same task.
+
+```haskell
+ghci> newTail [1,2,3]
+[2,3]
+ghci> newTail [1]
+[]
+ghci> newTail []
+*** Exception: <interactive>:10:5-23: Non-exhaustive patterns in function newTail
+
+```
