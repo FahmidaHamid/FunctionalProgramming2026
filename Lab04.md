@@ -68,8 +68,8 @@ ghci>
 - It takes a list containing `Num` type data as input and returns the summation of those number.
 
 - If we try to understand the definition of the function, we should read it like the following:
-  - **Base Case:** If the list is empty, then return 0
-  - **Recursive Case:** If the list is non-empty and the first element in the list is $x$ and the rest of the list is $xs$ then add $x$ to the `sumList` of $xs$.
+  - **Base Case:** If the list is **empty**, then return **0**
+  - **Recursive Case:** If the list is **non-empty** and the first element in the list is $x$ and the rest of the list is $xs$ then **add $x$ to the `sumList` of $xs$**.
 
 ### How does the process work:
 
@@ -107,3 +107,61 @@ ghci>
   - Then the function uses the outcome of the latest stage to compute the result for the next stage using specified formula.
 
 - Example: The base case is when the list is empty, return `0`. Then it adds the returned value from the immediate previous stage to compute the result for the current stage. Once the function reaches the top stage, it alredy has the outcome computed.
+
+### Example 02:
+
+```
+-- minimum' function
+
+-- base case
+minimum' [x] = x
+
+-- recursive case
+
+minimum' (x: y : rest)
+     | (x < y) = minimum' (x: rest)
+     | otherwise = minimum' (y : rest)
+
+```
+
+- If we load it with the **ghci**, and test with following test cases, we might understand what function `minimum'` does.
+
+```haskell
+
+ghci> minimum' [3]
+3
+
+ghci> minimum' [3, 1]
+1
+
+ghci> minimum' [3, 1, 2]
+1
+
+ghci> minimum' [3, 1, -2]
+-2
+
+ghci> minimum' [-3, 1, -2]
+-3
+
+ghci> minimum' [-3/3, 1, -2]
+-2.0
+
+ghci> minimum' [-3/3, 1, -2, 0, 11, -11]
+-11.0
+
+ghci> :t minimum'
+minimum' :: Ord a => [a] -> a
+ghci>
+
+```
+
+- So what does `minimum'` do?
+
+- It takes a list containing `Ord` type data (values that belong to Ord type class, in other words, values that are comparable) as input and returns the minimum of them.
+
+- If we try to understand the definition of the function, we should read it like the following:
+  - **Base Case:** If the list is has **only one element**, then return that element as minimum.
+
+  - **Recursive Case:** If the list is non-empty and the first two elements in the list are $x$ and $y$, and the rest of the list is $rest$ then compare $x$ to $y$ and depending on the smaller one between the two, call the same function `minimum'` on a new list that has the smaller one and $xs$.
+
+- note that Prelude has already a defined function called `minimum` which does the same task. Hence we used a slightly different name for our function.
