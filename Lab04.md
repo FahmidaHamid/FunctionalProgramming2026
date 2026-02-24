@@ -73,7 +73,7 @@ ghci>
 
 ### How does the process work:
 
-```test
+```haskell
 
 sumList [-1, 1, 2 , 3]
 
