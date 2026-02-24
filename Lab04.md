@@ -75,27 +75,27 @@ ghci>
 
 ```haskell
 
-[step 0]: sumList [-1, 1, 2 , 3]          <-------check step 9 -------->
+[step 0]: sumList [-1, 1, 2 , 3]
 
-    [step 1]: -1 + sumList [1, 2 , 3]       <------- check step 8 ------->
+    [step 1]: -1 + sumList [1, 2 , 3]
 
-            [step 2]: 1 +  sumList [2 , 3]    <----- check step 7 ----->
+            [step 2]: 1 +  sumList [2 , 3]
 
-                [step 3]: 2 + sumList [3]      <---- check step 6 ---->
+                [step 3]: 2 + sumList [3]
 
-                    [step 4]: 3 + sumList []    <---- check step 5 ---->
+                    [step 4]: 3 + sumList []
 
-                    [step 5]: 3 + 0       -- base case
+                    [step 5]: 3 + 0       <-- base case, check step 4 -->
 
-                [step 6]: 2 + 3
+                [step 6]: 2 + 3   <-------check step 3 -------->
 
-            [step 7]: 1 + 5
+            [step 7]: 1 + 5   <-------check step 2 -------->
 
-        [step 8]: -1 + 6
+        [step 8]: -1 + 6  <-------check step 1 -------->
 
-    [step 9]: 5
+    [step 9]: 5   <-------check step 0 -------->
 
-- The final computed result is 5
+-- The final computed result is 5
 
 ```
 
@@ -165,3 +165,96 @@ ghci>
   - **Recursive Case:** If the list is non-empty and the first two elements in the list are $x$ and $y$, and the rest of the list is $rest$ then compare $x$ to $y$ and depending on the smaller one between the two, call the same function `minimum'` on a new list that has the smaller one and $rest$.
 
 - note that Prelude has already a defined function called `minimum` which does the same task. Hence we used a slightly different name for our function.
+
+Now that we have seen a few examples, let's start solving some problems on our own:
+
+### Exercise 01
+
+- Define a function `productList` using a recursive approach that takes a list of numbers and returns their product. If the list is empty, the function should return 1. Ensure it handles both integers and floats.
+
+```haskell
+ghci> productList []
+1
+ghci> productList [5]
+5
+ghci> productList [5, 3]
+15
+ghci> productList [5, 3, 2]
+30
+ghci> productList [5, -3, 2]
+-30
+ghci> productList [-5, -3, 2]
+30
+ghci> productList [-5, -3, 2/3]
+10.0
+ghci> productList [-5, -3, 2/11]
+2.727272727272727
+ghci>
+
+
+```
+
+### Exercise 02:
+
+- Define a function `reverseList` that takes a list of any type and returns a new list with the elements in reverse order. Use a recursive approach and ensure the original list remains unchanged.
+
+```haskell
+ghci> reverseList []
+[]
+
+ghci> reverseList [2]
+[2]
+
+ghci> reverseList ['a']
+"a"
+
+ghci> reverseList ['a', 'b']
+"ba"
+
+ghci> reverseList "hello"
+"olleh"
+
+ghci> reverseList "hello 111222333"
+"333222111 olleh"
+
+ghci> reverseList [5, 4,3,2,1]
+[1,2,3,4,5]
+
+ghci> reverseList ([100, 20] ++ [1..5])
+[5,4,3,2,1,20,100]
+
+```
+
+
+### Exercise 03:
+
+In the last class/ lab, you handled lists and used list comprehension to produce new lists with various properties. `doubleList` is one such example that takes a list of numbers as input and produces a new list where each number in the original list is doubled.
+
+```haskell
+ghci> let doubleMyList xs = [2 * x | x <- xs]
+ghci> doubleMyList [1,2,3]
+[2,4,6]
+ghci> doubleMyList [1]
+[2]
+ghci> doubleMyList [-1, 3]
+[-2,6]
+ghci> 
+
+```
+
+Now, define a new function `doubleListRecursive` that does the same thing but uses a **recursive approach**. Ensure your function handles the empty list as the base case.
+
+```haskell
+
+ghci> doubleListRecursive []
+[]
+ghci> doubleListRecursive [2]
+[4]
+ghci> doubleListRecursive [1,2,3]
+[2,4,6]
+ghci> doubleListRecursive [-1,-2,-3]
+[-2,-4,-6]
+ghci> doubleListRecursive [-1.5,-2.5,-3.33]
+[-3.0,-5.0,-6.66]
+
+```
