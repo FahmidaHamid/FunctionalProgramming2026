@@ -15,9 +15,11 @@
 Definitions in mathematics are often given recursively.
 
 ```math
+\begin{gather*}
 f(x) = 2 * f(x-1) + c \\\\
 
 g(y) = g(y/2) + log_n \\\\
+\end{gather*}
 
 ```
 
