@@ -123,6 +123,9 @@ ghci>
 -- minimum' function
 
 -- base case
+
+minimum' [] = error "Please enter a non-empty list"
+
 minimum' [x] = x
 
 -- recursive case
@@ -136,6 +139,11 @@ minimum' (x: y : rest)
 - If we load it with the **ghci**, and test with following test cases, we might understand what function `minimum'` does.
 
 ```haskell
+
+ghci> minimum' []
+*** Exception: Please enter a non-empty list
+CallStack (from HasCallStack):
+  error, called at recursion.hs:14:15 in main:Main
 
 ghci> minimum' [3]
 3
@@ -169,11 +177,13 @@ ghci>
 - It takes a list containing `Ord` type data (values that belong to `Ord` type class, in other words, values that are comparable) as input and returns the minimum of them.
 
 - If we try to understand the definition of the function, we should read it like the following:
-  - **Base Case:** If the list is has **only one element**, then return that element as minimum.
+  - **Base Case:** If the list is **empty**, then it returns an error message.
 
-  - **Recursive Case:** If the list is non-empty and the first two elements in the list are $x$ and $y$, and the rest of the list is $rest$ then compare $x$ to $y$ and depending on the smaller one between the two, call the same function `minimum'` on a new list that has the smaller one and $rest$.
+  - **Base Case:** If the list has **only one element**, then it returns that element as minimum.
 
-- note that Prelude has already a defined function called `minimum` which does the same task. Hence we used a slightly different name for our function.
+  - **Recursive Case:** If the list is non-empty and the first two elements in the list are $x$ and $y$, and the rest of the list is $rest$ then it compares $x$ to $y$ and depending on the smaller one between the two, it calls the same function `minimum'` on a new list that has the smaller one and the $rest$.
+
+**Note:** that Prelude has already a defined function called `minimum` which does the same task. Hence we used a slightly different name for our function.
 
 Now that we have seen a few examples, let's start solving some problems on our own:
 
