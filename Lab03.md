@@ -1,11 +1,9 @@
 ---
-
 # COP 2930:: Functional Programming
 
 ## Spring 2026
 
 ### Lab 03
-
 ---
 
 ### Topic 01: Types and Typeclasses
@@ -629,7 +627,7 @@ Provide 6 test cases (exclude the given ones).
 
 ## Submission:
 
-    - Submit `lab03.hs` on Canvas.
+    - Submit `lab03<LASTNAME>.hs` on Canvas. Note that <LASTNAME> must be your last name.
     - Each problem worths 10 points.
 
 ### End Note: Keep practicing. Please go over the examples from your textbook (LearnYouAHaskellForGreatGood).
