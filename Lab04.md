@@ -1,4 +1,4 @@
-# COP 2930: Functional Programming
+# COP 2930:: Functional Programming (Haskell)
 
 ## Spring 2026
 
@@ -8,13 +8,16 @@
 
 ---
 
-# What is Recursion?
+## What is Recursion?
 
 **Recursion** is actually a way of defining functions in which the function is applied inside its own definition.
 
 Definitions in mathematics are often given recursively.
 
 ```math
+
+-- example
+
 \begin{gather*}
 f(x) = 2 * f(x-1) + c \\\\
 
@@ -23,27 +26,32 @@ g(y) = g(y/2) + log n \\\\
 
 ```
 
-Recursion is important to Haskell because unlike imperative languages (e.g., C, Java), we do computations in **Haskell** by **declaring what something is** instead of declaring how you get it.
+- Recursion is important to Haskell because unlike imperative languages (e.g., C, Java), we do computations in **Haskell** by **declaring what something is** instead of declaring how you get it.
 
 - That’s why there are no `while` loops or `for` loops in Haskell and instead we many times have to use recursion to declare what something is.
 
-For this lab, let us create a **source file** called `lab04<LASTNAME>.hs`, where `<LASTNAME>` must be replaced with your last name. We will be defining all the functions in this file.
+---
+
+## Lab 04
+
+- For this lab, let us create a **source file** called `lab04<LASTNAME>.hs`, where `<LASTNAME>` must be replaced with your last name. We will be defining all the functions in this file.
 
 ### Example 01:
 
 ```haskell
 
--- sumList function
+-- sumList, a function
 
 sumList [] = 0
 sumList (x: xs) = x + sumList xs
 
 ```
 
-If we load it with the **ghci**, and test with following test cases, we might understand what function `sumList` does.
+- If we load it with the **ghci**, and test with following test cases, we might understand what function `sumList` does.
 
 ```haskell
-fhamid@NSCHNS172 Codes % ghci lab04.hs
+
+fhamid@NSCHNS % ghci lab04.hs
 
 ghci> sumList []
 0
@@ -59,19 +67,20 @@ ghci> sumList [-1.5, 1, 2.5 , 3.33]
 5.33
 ghci> :t sumList
 sumList :: Num a => [a] -> a
+
 ghci>
 
 ```
 
 - So what does `sumList` do?
+  - It takes a list containing `Num` type data as input and returns the summation of those number.
 
-- It takes a list containing `Num` type data as input and returns the summation of those number.
+  - If we try to understand the definition of the function, we should read it like the following:
+    - **Base Case:** If the list is **empty**, then return **0**
 
-- If we try to understand the definition of the function, we should read it like the following:
-  - **Base Case:** If the list is **empty**, then return **0**
-  - **Recursive Case:** If the list is **non-empty** and the first element in the list is $x$ and the rest of the list is $xs$ then **add $x$ to the `sumList` of $xs$**.
+    - **Recursive Case:** If the list is **non-empty** and the first element in the list is $x$ and the rest of the list is $xs$ then the function **adds $x$ to the result of `sumList` of $xs$**.
 
-### How does the process work:
+- How does the process work:
 
 ```haskell
 
@@ -89,9 +98,9 @@ ghci>
 
                 [step 6]: 2 + 3   <-------check step 3 -------->
 
-            [step 7]: 1 + 5   <-------check step 2 -------->
+            [step 7]: 1 + 5   <------- check step 2 -------->
 
-        [step 8]: -1 + 6  <-------check step 1 -------->
+        [step 8]: -1 + 6  <------- check step 1 -------->
 
     [step 9]: 5   <-------check step 0 -------->
 
@@ -99,14 +108,14 @@ ghci>
 
 ```
 
-- I hope the basic idea is clear; here is my explanation:
+- I hope the basic idea is clear. Yet, here is my explanation in English:
   - The input is broken down to smaller parts until it reaches/hits possible base cases.
 
-  - Once the data hits the base cases, the function immidiately knows what to return.
+  - Once the data/input hits the base cases, the function immidiately knows what to return.
 
-  - Then the function uses the outcome of the latest stage to compute the result for the next stage using specified formula.
+  - Then the function uses the outcome of the latest stage to compute the result for the next stage using specified formula (like `+` in this case).
 
-- Example: The base case is when the list is empty, return `0`. Then it adds the returned value from the immediate previous stage to compute the result for the current stage. Once the function reaches the top stage, it alredy has the outcome computed.
+* Example: The base case is when the list is empty, return `0`. Then it adds the returned value from the immediate previous stage to compute the result for the current stage. Once the function reaches the top stage, it alredy has the outcome computed.
 
 ### Example 02:
 
