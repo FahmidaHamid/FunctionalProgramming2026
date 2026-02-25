@@ -51,7 +51,7 @@ sumList (x: xs) = x + sumList xs
 
 ```haskell
 
-fhamid@NSCHNS % ghci lab04.hs
+fhamid@NSCHNS % ghci Hamid.hs
 
 ghci> sumList []
 0
@@ -279,7 +279,7 @@ ghci> doubleListRecursive [-1.5,-2.5,-3.33]
 
 ### Exercise 04:
 
-Given the following function, write 6 test cases and add them to your `lab04.hs` file as multiline comments (right before the definition):
+Given the following function, write 6 test cases and add them to your `lab04<LASTNAME>.hs` file as multiline comments (right before the definition):
 
 ```haskell
 
@@ -292,9 +292,9 @@ factorial p
 
 Answer the additional questions after the test cases as well:
 
-    - a) Is `factorial` a recursive function?
-    - b) What does it do?
-    - c) What is/are the base case(s) [if any]?
+    a) Is `factorial` a recursive function?
+    b) What does it do?
+    c) What is/are the base case(s) [if any]?
 
 ### Exercise 05:
 
@@ -314,9 +314,9 @@ factorialTR p = go p 1
 
 Answer the following questions:
 
-- a) Do `factorial` and `factorialTR` do the same thing?
+a) Do `factorial` and `factorialTR` do the same thing?
 
-- b) Do you notice any fundamental differences between the two approaches?
+b) Do you notice any fundamental differences between the two approaches?
 
 **[Hint: Tail Recursion, will discuss it after the exam]**
 
@@ -355,24 +355,25 @@ ghci> newTail []
 
 The `zip` function (already defined in Prelude) combines two lists into a single list of pairs (tuples) by matching elements at the same position.
 
-- Pairing Strategy: It takes the first element from each list and puts them into a tuple, then the second element from each, and so on.
+- **Pairing Strategy:** It takes the first element from each list and puts them into a tuple, then the second element from each, and so on.
 
-- Handling Different Lengths: If the input lists are of different lengths, zip stops as soon as the shorter list is exhausted, discarding any remaining elements from the longer list.
+- **Handling Different Lengths:** If the input lists are of different lengths, zip stops as soon as the shorter list is exhausted, discarding any remaining elements from the longer list.
 
-- Immutability: It does not modify the original lists; instead, it returns a brand new list of tuples.
+- **Immutability:** It does not modify the original lists; instead, it returns a brand new list of tuples.
 
 ```haskell
 ghci> zip [] []
 []
 
-ghci> zip [1..5] []
-[]
-
-ghci> zip [1..5] [3..10]
-[(1,3),(2,4),(3,5),(4,6),(5,7)]
-
 ghci> zip [1,2,3] ["apple", "orange", "strawberry"]
 [(1,"apple"),(2,"orange"),(3,"strawberry")]
+
+ghci> zip [1..5] [] -- unequal lists and one list is empty
+[]
+
+ghci> zip [1..5] [3..10] -- unequal lists
+[(1,3),(2,4),(3,5),(4,6),(5,7)]
+
 
 ```
 
@@ -453,7 +454,7 @@ ghci>
 
 ```
 
-## Rubric \& Submission:
+### Rubric \& Submission:
 
 - Submit `lab04<LASTNAME>.hs` as a proof of your work for the lab.
 
