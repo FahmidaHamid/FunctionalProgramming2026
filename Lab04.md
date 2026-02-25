@@ -434,10 +434,12 @@ ghci>
 
 ```
 
-## Submission:
+## Rubric \& Submission:
 
 - Submit `lab04<LASTNAME>.hs` as a proof of your work for the lab.
 
-- Each exercise problem should have 6 test cases included as milti-line comments right before the function definition.
+- Each exercise should have 6 test cases included as multi-line comments right before the function definition.
 
 - Exercise 04 and 05 should have the questions answered (include them as multi-line comments).
+
+- Each exercise carries 10 points.
