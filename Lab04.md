@@ -15,9 +15,6 @@
 Definitions in mathematics are often given recursively.
 
 ```math
-
--- example
-
 \begin{gather*}
 f(x) = 2 * f(x-1) + c \\\\
 
@@ -51,7 +48,7 @@ sumList (x: xs) = x + sumList xs
 
 ```haskell
 
-fhamid@NSCHNS % ghci Hamid.hs
+fhamid@NSCHNS % ghci lab04Hamid.hs
 
 ghci> sumList []
 0
