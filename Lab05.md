@@ -16,7 +16,32 @@ Functions can take functions as parameters and also return functions. The functi
 
 -- test it
 
-map (+ 1) [1..5]
+ghci> map (+ 1) [1..5]
+???
+
+ghci> map (* 2) [3,2, (-5), 7]
+???
+
+ghci> map length ["hello", "hi", "pat"]
+??????
+
+ghci> map succ [1..5]
+???
+
+ghci> map pred [1..5]
+???
+
+
+ghci> map (3: ) [[1], [1, 2], []]
+???
+
+ghci> map (++ [2]) [[1], [1, 2], [3]]
 ???
 
 ``` 
+Note:
+
+- $map (+ 1) [1..5]$: map applies function (+ 1) on every element of the list [1,2,3,4,5]
+- $map (* 2) [3,2, (-5), 7]$: map applies function (* 2) on every element of the list [3,2, (-5), 7]
+- $map length ["hello", "hi", "pat"]$: map applies the length (available with Prelude) function on the list of strings (["hello", "hi", "pat"])
+
