@@ -47,8 +47,58 @@ Note:
 
 ## Exercise 01:
 
-- Write an expression in Haskell that multiplies 10 with every element of the list, given a list of integers and return the list.
+- Write an expression in Haskell that multiplies 10 with every element of the list, given a list of integers and returns the new list.
 - Test the expression with three different lists.
 - Copy and paste your tested result as multi-line comments in a file called `Lab05<LASTNAME>.hs`.
 - Please don't forget to add the exercise number at the beginning of each comment.
  
+```haskell
+{-
+exercise 01
+
+ghci> let exercise01 = map (* 10)
+
+ghci> exercise01 [1..10]
+
+[10,20,30,40,50,60,70,80,90,100]
+
+-}
+
+```
+
+## Exercise 02:
+
+
+- Write an expression in Haskell that divides every element of the list by 2, given a list of integers and returns the new list.
+- Test the expression with three different lists.
+- Copy and paste your tested result as multi-line comments in a file called `Lab05<LASTNAME>.hs`.
+- Please don't forget to add the exercise number at the beginning of each comment.
+
+
+## Exercise 03: Recursion
+
+- Can we define our own map function? Let's try. Assume, we call it `myMap`. While
+defining the solution, we need to think of two questions:
+
+	- What will be the base cases?
+
+	- What will be the recursive cases?
+
+```
+- hint: save in the lab05<LASTNAME>.hs file
+ 
+- 1. the list may be empty? (base case)
+
+myMap func [] = []
+
+- 2. the list is not empty? (recursive case)
+
+myMap func (x:xs) = (func x) : myMap func xs
+
+
+```
+Once defined, test $myMap$ with three different functions (e.g., pred, succ, length, (* 10))
+and record their responses right below the definition of myMap as multi-line comment.
+
+
+
