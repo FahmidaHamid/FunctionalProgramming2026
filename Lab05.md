@@ -101,7 +101,7 @@ Once defined, test $myMap$ with three different functions (e.g., pred, succ, len
 and record their responses right below the definition of myMap as multi-line comment.
 
 
-## Exercise 04: Our first HoF
+## Exercise 04: Our First HoF
 
 ```haskell
 
@@ -114,7 +114,98 @@ applyTwice f x = f (f x)
 Answer the following questions:
 
 - How many parameters does applyTwice take?
-- What is the type signature? (you may check it with the :t or :type command)
+- What is the type signature of applyTwice function? (you may check it with the :t or :type command)
 - Test applyTwice with three distinct test cases and record the responses as multi-line comment right below the function definition.
 - Predict the output of the following expression and record it as well: applyTwice (map (* 3)) [1..5]
+
+## Exercise 05: Filter
+
+- **filter** is a higher-order function used to extract elements from a list that satisfy a specific condition. 
+
+- It iterates through a list and returns a new list containing only the elements for which a provided "predicate" function 
+evaluates to True.
+
+```haskell
+
+-- test the following
+
+ghci> filter even [1..10]
+???
+ghci> filter odd [1..10]
+???
+ghci> filter (> 5) [1..10]
+???
+
+```
+Note: `even` and `odd` are already defined in the standard Prelude.
+
+Try filter for three unique test cases (exclude the ones provided here) and record the responses as multi-line comments.
+
+## Exercise 06: Lambda Function (aka Anonymous Function)
+
+Lambda function is a way to define a function anonymously (without a name).
+
+** When and why?**
+
+Lambda functions are most useful when you need a quick, one-off logic that doesn't deserve its own name. 
+In Haskell, they are primarily used to keep code "local" and readable. They are often used with higher-order functions.
+
+
+
+```haskell
+
+-- example
+-- condition: find all the values that are greater than 20 and less than 50
+
+ghci> filter (\x -> x > 20 && x < 50) [1..70]
+???
+
+```
+
+- Write a valid expression in Haskell to extract (find/filter) all the elements from a list that are divisible by 3 and greater than 20.
+- Test it with three different lists.
+- Record each test cases as multi-line comments.
+
+
+## Exercie 07: More filtering with anonymous functions
+
+ 
+
+- Write a valid expression in Haskell to extract (find/filter) all the strings from a list of string that are at least 3 characters long.$
+- Test it with three different lists.
+- Record each test cases as multi-line comments.
+
+## Exercise 08: Filtering on a list of tuples
+
+
+```haskell
+
+-- note: sometimes we give a temporary name to an expression, like, tuple10
+-- tuple10 takes a tuple (x,y) as input and returns True/False based on the specified condition
+
+ghci> let tuple10 = \(x,y) -> x + y == 10 
+
+-- note: now we filter a list of tuples based on the condition
+
+ghci> filter tuple10 [(10, 0), (9, 2), (2,3), (7,3), (12, 2), (12, -2)]
+
+-- sample output
+
+[(10,0),(7,3),(12,-2)]
+
+-- the following will be the same expression
+
+
+ghci> filter (\(x, y) -> x + y == 10) [(10, 0), (9, 2), (2,3), (7,3), (12, 2), (12, -2)]
+
+[(10,0),(7,3),(12,-2)]
+
+```
+
+- Write a Haskell expression using filter to find all pairs in a list of pairs (aka tuples) where the product of the two numbers is exactly 15.
+- Test it with three different list of tuples.
+- Record each test cases as multi-line comments.
+
+
+ 
 
