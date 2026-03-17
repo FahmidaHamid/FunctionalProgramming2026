@@ -101,4 +101,21 @@ Once defined, test $myMap$ with three different functions (e.g., pred, succ, len
 and record their responses right below the definition of myMap as multi-line comment.
 
 
+## Exercise 04: Our first HoF
+
+```haskell
+
+-- exercise 04: save it in lab05<LASTNAME>.hs
+
+applyTwice f x = f (f x)
+
+```
+
+Answer the following questions:
+
+	- How many parameters does $applyTwice$ take?
+	- What is the type signature? (you may check it with the :t or :type command)
+	- Test $applyTwice$ with three distinct test cases and record the responses as multi-line comment right below the function definition.
+	- predict the output of the following repression and record it as well:
+	**applyTwice (map (* 3)) [1..5]**
 
