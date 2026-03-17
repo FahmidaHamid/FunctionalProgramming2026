@@ -41,7 +41,7 @@ ghci> map (++ [2]) [[1], [1, 2], [3]]
 ``` 
 Note:
 
-- _map (+ 1) [1..5]_: map applies function (+ 1) on every element of the list [1,2,3,4,5]
-- _map (* 2) [3,2, (-5), 7]_: map applies function (* 2) on every element of the list [3,2, (-5), 7]
-- _map length ["hello", "hi", "pat"]_: map applies the length (available with Prelude) function on the list of strings (["hello", "hi", "pat"])
+- __map (+ 1) [1..5]__: map applies function (+ 1) on every element of the list [1,2,3,4,5]
+- __map (* 2) [3,2, (-5), 7]__: map applies function (* 2) on every element of the list [3,2, (-5), 7]
+- __map length ["hello", "hi", "pat"]__: map applies the length (available with Prelude) function on every string of the list (["hello", "hi", "pat"])
 
