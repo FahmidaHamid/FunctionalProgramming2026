@@ -45,3 +45,10 @@ Note:
 - __map (* 2) [3,2, (-5), 7]__: map applies function (* 2) on every element of the list [3,2, (-5), 7]
 - __map length ["hello", "hi", "pat"]__: map applies the length (available with Prelude) function on every string of the list (["hello", "hi", "pat"])
 
+## Exercise 01:
+
+- Write an expression in Haskell that multiplies 10 with every element of the list, given a list of integers and return the list.
+- Test the expression with three different lists.
+- Copy and paste your tested result as multi-line comments in a file called `Lab05<LASTNAME>.hs`.
+- Please don't forget to add the exercise number at the beginning of each comment.
+ 
