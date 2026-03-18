@@ -93,13 +93,13 @@ defining the solution, we need to think of two questions:
 	- What will be the recursive cases?
 
 ```
-- hint: save in the lab05<LASTNAME>.hs file
+-- hint: save in the lab05<LASTNAME>.hs file
  
-- 1. the list may be empty? (base case)
+-- 1. the list may be empty? (base case)
 
 myMap func [] = []
 
-- 2. the list is not empty? (recursive case)
+-- 2. the list is not empty? (recursive case)
 
 myMap func (x:xs) = (func x) : myMap func xs
 
@@ -121,10 +121,10 @@ applyTwice f x = f (f x)
 
 Answer the following questions:
 
-- How many parameters does applyTwice take?
-- What is the type signature of applyTwice function? (you may check it with the :t or :type command)
-- Test applyTwice with three distinct test cases and record the responses as multi-line comment right below the function definition.
-- Predict the output of the following expression and record it as well: applyTwice (map (* 3)) [1..5]
+- How many parameters does `applyTwice` take?
+- What is the type signature of the `applyTwice` function? (you may check it with the :t or :type command)
+- Test `applyTwice` with three distinct test cases and record the responses as multi-line comment right below the function definition.
+- Predict the output of the following expression and record it as well: `applyTwice (map (* 3)) [1..5]`
 
 ## Exercise 05: Filter
 
