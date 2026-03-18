@@ -248,8 +248,7 @@ their performance characteristics regarding memory use
 	- Example: foldr (-) 0 [1, 2, 3] results in (1 - (2 - (3 - 0))), which evaluates to 2. 
 
 Example:
-```
-
+```haskell
 ghci> foldr (+) 0 [1,2,3,4]
 10
 
@@ -262,6 +261,88 @@ ghci> foldl (-) 0 [1,2,3]
 ghci> foldr (-) 0 [1,2,3]
 2
 
+```
+- Note: Use **foldr** by __default__ in Haskell, especially when working with potentially infinite lists or when the result can be 
+produced lazily (e.g., building a new list).
+
+- Avoid using `foldl` due to its tendency to create performance issues with thunks in a lazy language like Haskell.
+
+
+```haskell
+
+ghci> foldr (+) 0 [1..]
+*** Exception: stack overflow
+
+ghci> foldl (+) 0 [1..]
+^Zzsh: suspended (signal)
+
+```
+
+- Using a fold function define an expression that decides whether a list contains at least one value greater than 100. Here is how we can define it:
+
+
+```haskell
+
+ghci> let exprGreaterThan100 = foldr (\x rest -> if x >= 100 then True else rest) False
+
+ghci> exprGreaterThan100 [10, 150, 122, -900, 90, 123, 55, 009]
+
+True
 
 
 ```
+
+Given the idea, define an expression (say, `allGreaterThan100`) that checks if all the elements from a list are greater than or equal to 100.
+
+
+```haskell
+
+-- sample test cases
+
+ghci> allGreaterThan100 [10, 150, 122, -900, 90, 123, 55, 009]
+False
+
+ghci> allGreaterThan100 [110, 150, 122, 900, 190, 123, 155, 1009]
+True
+
+ghci> allGreaterThan100 [110, 150]
+True
+
+ghci> allGreaterThan100 [110, -150]
+False
+
+ghci> allGreaterThan100 []
+True
+
+ghci> allGreaterThan100 [1]
+False
+```
+
+## Exercise 11: Recursion
+
+- Define our own version of foldr function (say, `ourFoldR`).
+- Test ite with at least 3 different test cases.
+- Record all the test cases along with the results as multi-line comments.
+
+```haskell
+-- sample test cases
+-- please exclude these
+
+ghci> ourFoldR (+) 0 [1]
+1
+ghci> ourFoldR (+) 0 [1, 2]
+3
+ghci> ourFoldR (+) 0 [1, 2, 3]
+6
+ghci> ourFoldR (+) 0 [1, 2, 3, 4]
+10
+ghci> ourFoldR (-) 0 [1, 2, 3, 4]
+2
+ghci> ourFoldR (\x rest -> if x >= 3 then True else rest) False [1, 2, 3, 4]
+True
+ghci> ourFoldR (\x rest -> if x >= 3 then True else rest) False [1, 2, -3, -4]
+False
+ghci> 
+
+```
+
