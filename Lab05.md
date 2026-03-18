@@ -207,5 +207,61 @@ ghci> filter (\(x, y) -> x + y == 10) [(10, 0), (9, 2), (2,3), (7,3), (12, 2), (
 - Record each test cases as multi-line comments.
 
 
- 
+## Exercise 09: Recursion
 
+- Define our own version of the filter function. Let's call it  ourFilterFunction.
+- Test it in five different ways.
+- Record each test cases as multi-line comments. 
+
+```
+-- sample test cases,
+-- please exclude my test cases
+
+ghci> ourFilterFunction (>= 2) [1, -1, 2,-2, 3,-3]
+[2,3]
+
+ghci> ourFilterFunction (/= 2) [1, -1, 2,-2, 3,-3]
+[1,-1,-2,3,-3]
+
+ghci> ourFilterFunction (\x -> mod x 2 == 0) [1, -1, 2,-2, 3,-3]
+[2,-2]
+
+```
+
+## Exercise 10: foldl/foldr 
+
+- Both folds a list into a single value using an accumulating function and an initial value.
+
+- In Haskell, the primary differences between `foldl` and `foldr` are their associativity (left vs. right), 
+their behavior with lazy evaluation (ability to work with infinite lists), and 
+their performance characteristics regarding memory use
+
+
+- Consider folding the list [1, 2, 3] with an initial value 0 and a function f (e.g., subtraction -). 
+
+- foldl f z [x1, x2, x3] expands to f (f (f z x1) x2) x3
+
+	- Example: foldl (-) 0 [1, 2, 3] results in (((0 - 1) - 2) - 3), which evaluates to -6.
+
+- foldr f z [x1, x2, x3] expands to f x1 (f x2 (f x3 z))
+	
+	- Example: foldr (-) 0 [1, 2, 3] results in (1 - (2 - (3 - 0))), which evaluates to 2. 
+
+Example:
+```
+
+ghci> foldr (+) 0 [1,2,3,4]
+10
+
+ghci> foldr (+) 0 [1,2,3,4]
+10
+
+ghci> foldl (-) 0 [1,2,3]
+-6
+
+ghci> foldr (-) 0 [1,2,3]
+2
+
+
+
+```
