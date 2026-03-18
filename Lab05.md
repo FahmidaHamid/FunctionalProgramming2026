@@ -2,6 +2,11 @@
 ## Spring 2026
 ## Lab 05: Higher-Order Functions and more Recursion
 
+*************************************************
+** - Points: 12 * 6 = 72
+** - Submit: lab05<LASTNAME>.hs
+*************************************************
+
 
 # Higher Order Function
 
@@ -346,3 +351,39 @@ ghci>
 
 ```
 
+## Exercise 12: zipWith
+
+The `zipWith` function in Haskell combines two lists into a single list by applying a given binary function to corresponding elements from each list. 
+It is part of the standard Prelude library and does not require any additional imports. 
+
+```haskell
+ghci> zipWith (+) [1,2,3,4] [-1, -2, -3, -4]
+[0,0,0,0]
+
+ghci> zipWith (*) [1,2,3,4] [-1, -3, -5, -7]
+[-1,-6,-15,-28]
+
+ghci> zipWith (/) [1,2,3,4] [-1, -3, -5, -7]
+[-1.0,-0.6666666666666666,-0.6,-0.5714285714285714]
+
+ghci> zipWith (/) [1,2,3,4] [1..10]
+[1.0,1.0,1.0,1.0]
+
+```
+- Write an expression that uses `zipWith` and some other higher order function to check if two lists (list of numbers or strings) are exactly the same or not.
+- Test yor expression like the following.
+
+```haskell
+ghci> someExpression [1..5] [10,3,2,5,4]
+False
+
+ghci> someExpression [1..5] [1..5]
+True
+
+ghci> someExpression "Hello" "Hello"
+True
+
+ghci> someExpression "Hello" "Hello World"
+True
+
+```
