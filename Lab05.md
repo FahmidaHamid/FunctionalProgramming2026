@@ -2,10 +2,13 @@
 ## Spring 2026
 ## Lab 05: Higher-Order Functions and more Recursion
 
-*************************************************
-** - Points: 12 * 6 = 72
-** - Submit: lab05<LASTNAME>.hs
-*************************************************
+**************************************************************
+
+ - Points: 12 * 6 = 72
+
+ - Submit: lab05<LASTNAME>.hs [LASTNAME must be your last name]
+
+****************************************************************
 
 
 # Higher Order Function
@@ -52,7 +55,7 @@ Note:
 
 ## Exercise 01:
 
-- Write an expression in Haskell that multiplies 10 with every element of the list, given a list of integers and returns the new list.
+- Write an expression in Haskell that multiplies 10 with every element of the list, given a list of integers.
 - Test the expression with three different lists.
 - Copy and paste your tested result as multi-line comments in a file called `Lab05<LASTNAME>.hs`.
 - Please don't forget to add the exercise number at the beginning of each comment.
@@ -74,7 +77,7 @@ ghci> exercise01 [1..10]
 ## Exercise 02:
 
 
-- Write an expression in Haskell that divides every element of the list by 2, given a list of integers and returns the new list.
+- Write an expression in Haskell that divides every element of the list by 2.
 - Test the expression with three different lists.
 - Copy and paste your tested result as multi-line comments in a file called `Lab05<LASTNAME>.hs`.
 - Please don't forget to add the exercise number at the beginning of each comment.
