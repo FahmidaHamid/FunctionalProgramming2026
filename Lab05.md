@@ -4,7 +4,7 @@
 
 **************************************************************
 
- - Points: 12 * 6 = 72
+ - Points: 13 * 6 = 78
 
  - Submit: lab05<LASTNAME>.hs [LASTNAME must be your last name]
 
@@ -374,7 +374,7 @@ ghci> zipWith (/) [1,2,3,4] [1..10]
 
 ```
 - Write an expression that uses `zipWith` and some other higher order function to check if two lists (list of numbers or strings) are exactly the same or not.
-- Test yor expression like the following.
+- Test your expression like the following.
 
 ```haskell
 ghci> someExpression [1..5] [10,3,2,5,4]
@@ -388,5 +388,23 @@ True
 
 ghci> someExpression "Hello" "Hello World"
 True
+
+```
+
+## Exercise 13: Recursion
+
+- Implement our own version of the `zipWith` function using recursion. Let's call it `ourZipWithFunc`.
+- Test it for at least 3 different test cases.
+
+```haskell
+-- please exclude these test cases
+ghci> ourZipWithFunc (+) [1..5] [1..10]
+[2,4,6,8,10]
+
+ghci> ourZipWithFunc (+) [1..5] [1,1,1,1]
+[2,3,4,5]
+
+ghci> ourZipWithFunc (*) [1..5] [1,0,1,0]
+[1,0,3,0]
 
 ```
