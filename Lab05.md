@@ -316,7 +316,7 @@ True
 
 - Given the idea of fold, define an expression (say, `shortStrs`) that checks if all the strings from a list of strings have less than or equal to 4 characters.
 
-- Given the idea of fold, define an expression (say, `someShortStrs`) that checks if at least one the string from a list of strings has less than or equal to 4 characters.
+- Given the idea of fold, define an expression (say, `someShortStrs`) that checks if at least one string from a list of strings has less than or equal to 4 characters.
 
 - Provide three test cases for each of the problems.
 
