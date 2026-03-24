@@ -6,9 +6,9 @@
 
 ---
 
-- Points: 13 \* 6 = 78
+- Points: 12 \* 6 + 9 (exercise 10) = 81
 
-- Submit: lab05<LASTNAME>.hs [LASTNAME must be your last name]
+- Submit: `lab05<LASTNAME>.hs` [LASTNAME must be your last name]
 
 ---
 
@@ -322,7 +322,6 @@ True
 
 - Everything (exressions and test cases) should be written as multi-line comments in the same file.
 
-
 ```haskell
 
 -- sample test cases
@@ -431,4 +430,3 @@ ghci> ourZipWithFunc (*) [1..5] [1,0,1,0]
 ```
 
 - Please submit the `lab05<LASTNAME>.hs` file by the due date.
-
