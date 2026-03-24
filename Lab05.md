@@ -314,9 +314,9 @@ True
 
 - Given the idea of fold, define an expression (say, `allGreaterThan100`) that checks if all the elements from a list are greater than or equal to 100.
 
-- Given the idea of fold, define an expression (say, `shortStrs`) that checks if all the strings from a list of strings are less than or equal to 4.
+- Given the idea of fold, define an expression (say, `shortStrs`) that checks if all the strings from a list of strings have less than or equal to 4 characters.
 
-- Given the idea of fold, define an expression (say, `someShortStrs`) that checks if at least one the string from a list of strings are less than or equal to 4.
+- Given the idea of fold, define an expression (say, `someShortStrs`) that checks if at least one the string from a list of strings have less than or equal to 4 characters.
 
 - Provide three test cases for each of the problems.
 
