@@ -66,8 +66,10 @@ This is an example of defining a function (numUniques) by using function composi
 
 numUniques function
 1. takes a list as input
-2. calls the nub function that removes the duplicates from the list and returns a list with only unique items
-3. then calls the length function on the list returned at stage 2 with to count the length of the new list
+2. calls the nub function that removes the duplicates from the input list and returns a new list with only unique items
+3. then it calls the length function on returned list (at stage 2) to count the length of the new list
+
+ So, the numUniques function returns the total number of unique items in a given list.
 
 -}
 
@@ -81,6 +83,7 @@ Let's test it.
 ghci> nub [1,2,3,5,2,3,1,5,-5]
 [1,2,3,5,-5]
 
+-- same as our function
 ghci> length (nub [1,2,3,5,2,3,1,5,-5])
 5
 
@@ -102,6 +105,9 @@ nub :: Eq a => [a] -> [a]
 ghci> :t length
 length :: Foldable t => t a -> Int
 
+--  the type signature length :: Foldable t => t a -> Int tells us that length is a generic function that can count elements in many different types of containers, not just lists.
+-- type structure `t`: t could be a list, a tree, a set, or some other foldable structure.
+-- type items `a`: The type of items stored inside that structure
 ghci>
 
 ```
