@@ -66,8 +66,8 @@ This is an example of defining a function (numUniques) by using function composi
 
 numUniques function
 1. takes a list as input
-2. calls the nub function that removes the duplicates from the list and returns a list with only uniq$
-3. then calls the length function on the list returned at stage 2 with to count the length of the new$
+2. calls the nub function that removes the duplicates from the list and returns a list with only unique items
+3. then calls the length function on the list returned at stage 2 with to count the length of the new list
 
 -}
 
@@ -105,8 +105,9 @@ length :: Foldable t => t a -> Int
 ghci>
 
 ```
-* Note:
-    * `length` deals with `Foldable` (a typeclass) whereas `nub` deals with `[a]`, i.e. lists. 
-    * Every list is foldable but every foldable is not a list. 
-    * Simple example: `foldr` is a higher order and deals with `Foldable` objects. So not everything that is of `Foldable` is a `list`.
-    * A List is one specific kind of Foldable container. 
+
+- Note:
+  - `length` deals with `Foldable` (a typeclass) whereas `nub` deals with `[a]`, i.e. lists.
+  - Every list is foldable but every foldable is not a list.
+  - Simple example: `foldr` is a higher order and deals with `Foldable` objects. So not everything that is of `Foldable` is a `list`.
+  - A List is one specific kind of Foldable container.
