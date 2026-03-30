@@ -45,7 +45,7 @@ ghci>
 * Example: `Data.List` is a module that has a bunch of useful functions for working with lists and use a function that it exports to create a function that tells us how many unique elements a list has.
   - You may check the module details here: https://hackage-content.haskell.org/package/base-4.22.0.0/docs/Data-List.html
 
-* Create a file called lab06<lastname>.hs and white the following statements. Note that lastname should be your last name.
+* Create a file called `lab06<lastname>.hs` and white the following statements. Note that `lastname` should be your last name.
 
 ```haskell
 import Data.List
@@ -117,3 +117,35 @@ ghci>
   - Every list is foldable but every foldable is not a list.
   - Simple example: `foldr` is a higher order and deals with `Foldable` objects. So not everything that is of `Foldable` is a `list`.
   - A List is one specific kind of Foldable container.
+
+* Another way of doing the same job:
+
+```haskell
+countUniqueItems xs = (length . nub) xs
+```
+
+- Now we can test it:
+
+```haskell
+ghci> :r
+[1 of 2] Compiling Main             ( lab06Hamid.hs, interpreted )
+Ok, one module loaded.
+ghci> :browse
+numUniques :: Eq a => [a] -> Int
+countUniqueItems :: Eq a => [a] -> Int
+ghci> numUniques [1,2,3,4,1,3,2,3,1,5,1,4,2,1]
+5
+ghci> countUniqueItems  [1,2,3,4,1,3,2,3,1,5,1,4,2,1]
+5
+ghci>
+```
+
+- Note that though we didn't define the type signature of `countUniqueItems`, GHCi was able to detect/define it. Why?
+
+* `nub` only works on lists
+
+* `length` works on any structure t that implements the Foldable typeclass
+
+* GHCi looks at the input to the whole chain:
+  - Since nub is the first function to receive `xs`, and nub requires a list [a], xs must be a list.
+  - Because nub requires the elements to be comparable for equality, it adds the constraint Eq a.
