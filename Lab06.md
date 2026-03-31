@@ -120,13 +120,26 @@ length :: Foldable t => t a -> Int
 
 * Every list is foldable but every foldable is not a list.
 
-* Simple example: `foldr` is a higher order and deals with `Foldable` objects. So not everything that is of `Foldable` is a `list`.
+* example: `foldr` is a higher order function and it deals with `Foldable` instances/structures; not everything that is of `Foldable` is a `list`.
+
+* example: `sum` is another function that deals with `Foldable` instances/structures.
 
 * A List is one specific kind of Foldable container.
 
-### Exercise 02: Another way of doing the same job:
+```haskell
+ghci> :t sum
+sum :: (Foldable t, Num a) => t a -> a
+ghci> :t foldr
+foldr :: Foldable t => (a -> b -> b) -> b -> t a -> b
+ghci>
+
+
+```
+
+### Exercise 02: Another way of defining the same problem
 
 ```haskell
+
 countUniqueItems xs = (length . nub) xs
 ```
 
@@ -150,8 +163,8 @@ ghci>
 
 * `nub` only works on lists
 
-* `length` works on any structure t that implements the Foldable typeclass
+* `length` works on any structure `t` that implements the `Foldable` typeclass
 
 * GHCi looks at the input to the whole chain:
-  - Since nub is the first function to receive `xs`, and nub requires a list [a], xs must be a list.
-  - Because nub requires the elements to be comparable for equality, it adds the constraint Eq a.
+  - Since nub is the first function to receive `xs`, and nub requires a list `[a]`, `xs` must be a list.
+  - Because nub requires the elements to be comparable for `equality`, it adds the constraint `Eq a`.
