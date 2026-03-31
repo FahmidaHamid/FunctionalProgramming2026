@@ -44,7 +44,7 @@ ghci>
 
 ### Exercise 01:
 
-`Data.List` is a module that has a bunch of useful functions for working with lists and use a function that it exports to create a function that tells us how many unique elements a list has.
+- `Data.List` is a module that has a bunch of useful functions for working with lists.
 
 - You may check the module details here: https://hackage-content.haskell.org/package/base-4.22.0.0/docs/Data-List.html
 
