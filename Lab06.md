@@ -120,7 +120,7 @@ length :: Foldable t => t a -> Int
 
 * Every list is foldable but every foldable is not a list.
 
-* example: `foldr` is a higher order function and it deals with `Foldable` instances/structures; not everything that is of `Foldable` is a `list`.
+* example: `foldr` is a higher order function and it deals with `Foldable` instances/structures; not everything that is `Foldable` is a `list`.
 
 * example: `sum` is another function that deals with `Foldable` instances/structures.
 
@@ -144,7 +144,8 @@ foldr :: Foldable t => (a -> b -> b) -> b -> t a -> b
 
 ```haskell
 
-countUniqueItems xs = (length . nub) xs
+countUniqueItems xs = length (nub xs)
+
 ```
 
 - Now we can test it:
